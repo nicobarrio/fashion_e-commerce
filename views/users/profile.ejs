@@ -1,0 +1,82 @@
+<!DOCTYPE html> 
+<html lang="en">
+    <%-  include('../partials/head.ejs', { css_files: ["profile"] })%>
+
+<!--     <link href="/css/login.css" rel ="stylesheet">
+ -->
+
+ <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+</head>
+
+<body>
+
+    <%- include('../partials/header.ejs') %>
+
+   <main>
+    <section class="section_profile_user flex-col">
+
+        <div class="profileUser">
+            <h2 class="title"> Bienvenidx  <span><%= user.name %></span>  </h2>
+            <img src="/users/<%= user.avatar %>" alt="" class="img_profile">
+            <p> Su mail es: <%= user.email %> </p>
+        </div>
+
+        <div class="buttons-container flex-col">
+
+        <div class="edit_button btn-container">
+            <a href="/user/edit">
+                <button class="btn btn_edit">
+                    EDITAR USUARIO
+                </button type="button">
+            </a>
+        </div>
+    
+        <div class="delete_button btn-container">
+            <form action="/user/delete?_method=delete" method="post" id="form_eliminarCuenta">
+                <button class="btn btn_delete" id="btn_eliminarCuenta" type="submit">
+                    ELIMINAR MI CUENTA
+                </button type="submit">
+            </form>
+        </div>
+    
+        <div clasS="favorites_button btn-container">
+            <a href="/user/favorites/<%=user.iduser%>">
+                <button class="btn btn_favorite">
+                    VER MIS FAVORITOS
+                </button>
+            </a>
+        </div>
+
+        <% if( locals.userLogged && (locals.userLogged.is_admin == 0) ){ %>
+
+            <div class="favorites_button btn-container">
+                <a href="/products/crear">
+                    <button class="btn btn_create">
+                        CREAR NUEVO PRODUCTO
+                    </button>
+                </a>
+            </div>
+            <div class="favorites_button btn-container">
+                <a href="http://127.0.0.1:5173">
+                    <button class="btn btn_dashboard">
+                        DASHBOARD - CULMEN
+                    </button>
+                </a>
+            </div>
+
+        <% } %>
+        </div>
+
+    </section>
+
+   
+    
+   </main>
+
+    <%-  include('../partials/footer.ejs')   %>
+
+<script src="/js/profileUser.js"></script>
+</body>
+</html>

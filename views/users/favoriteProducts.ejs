@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%-  include('../partials/head.ejs', { css_files: ["profile" , "home", "favoriteProduct"] })%>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+
+<body>
+
+    <%- include('../partials/header.ejs') %>
+
+   <main>
+
+    <section class="section_profile_user">
+
+        <div class="profileUser">
+            <h1> Hola <%= user.name %> </h1>
+            <nav class="nav-favorites">
+                <ul>
+                    <li><a href="/user/profile"> Volver al perfil </a></li>
+                    <li><a href="/products"> Ver todos los productos </a></li>
+                    <li><a href="/">Ir a Home </a></li>
+                    <li><a href="http://127.0.0.1:5173/">Ir al Dashboard </a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </section>
+    
+    
+ 
+    <% if(products && products.length > 0){  %>
+
+        <section class="section-productos flex-col">
+            <h2 class="title-favorites"> Aqui estan tus productos favoritos: </h2>
+            <div class="container-productos flex-col "> 
+                <%  products.forEach((p)=>{ %>
+
+                <article class="producto card">
+                    <a href="/products/<%= p.idProduct %>" class="enlace">
+                        <div class="card2">
+                            <form action="/carrito/favorites/<%= p.idProduct %>/remove" method="POST" class="form-delete" id="form-delete">
+                                <button type="submit" class="btn-remove" data-form="form-delete"><i class="fa-solid fa-trash-can"></i></button>
+                            </form>
+                            <img src="/products/<%= p.imageProduct.image_route %>" alt="" class="img-product">
+                            <button class="btn" type="button"> VER DETALLE </button>
+                            <div class="main-art-prducto">
+                                <p><strong class="producto-precio">$<%= p.price %></strong></p>
+                                <p class="producto-nombre"><strong><%= p.name %></strong></p>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+
+                <%  }) %>
+
+
+             </div> 
+        </section>
+
+    <% }else{ %>
+
+        <section class="section-productos flex-col">
+            <h4 class="title-favorites"> Todavia no haz elegidos productos favoritos </h4>
+            <a href="/products">
+                <button type="button" class="btn-elegir"> Elegir </button>
+            </a>
+        </section>
+
+    <% } %>
+
+
+   </main>
+
+    <%-  include('../partials/footer.ejs')   %>
+
+    <!-- <script src="sweetalert2.all.min.js"></script> -->
+    <script src="/js/favoritesFront.js"></script>
+</body>
+</html>

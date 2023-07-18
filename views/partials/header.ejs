@@ -1,0 +1,147 @@
+<header class="flex-col">
+
+    <section class="header-header flex-row">
+
+        <div class="contenedor-hamburguesa">
+            <a href="#" class="menu-hamburguesa-boton" id="hamburguesa-boton">
+                <i class="fas fa-bars hamburg"></i>
+            </a>
+            <div class="menu-overlay"></div>
+            <div class="menu-options">
+                <ul id="menu-ul">
+                    <li > <a href="/"> Home </a></li>
+                    <li > <a href="/products/listarProducts?buscador_home=hombre">Hombre</a> </li>
+                    <li > <a href="/products/listarProducts?buscador_home=mujer">Mujer</a> </li>
+                    <li > <a href="/products/listarProducts?buscador_home=niño">Niño</a> </li>
+                    <li > <a href="/products/listarProducts?buscador_home=lentes">Lentes</a> </li>
+                    <li > <a href="/products/listarProducts?buscador_home=gorra">Gorra</a> </li>
+                    <li id="all_products"><a href="/products">Todos los productos</a></li>
+                    <li><a href="/user/login">Iniciar sesión o registrarse</a> </li>
+                    <% if( locals.userLogged && (locals.userLogged.is_admin == 0) ){ %>
+                        <li><a href="http://127.0.0.1:5173/">Dashboard</a></li>
+
+                    <% }%>
+                </ul>
+            </div>
+        </div>
+
+        <div class="contenedor-logo">
+            <a href="/">
+                <img src="/image/logo-culmen.png" alt="Logo Culmen" class="logo">
+            </a>
+        </div>
+
+        <nav class="nav-bar flex-row">
+            <div class="contenedor-buscador">
+
+                <form action="/products/listarProducts" method="get" class="form_buscador">
+                    <input type="text" name="buscador_home" id="buscador_home" class="buscador_home" placeholder="Busque su producto...">
+                    <button type="submit" class="btn_buscador">
+                           <i class="fas fa-search icon_header lupita"></i>
+                    </button>
+                </form>
+            </div>
+            
+            <div class="contenedor-carrito">
+                <a href="/carrito">
+                    <i class="fas fa-shopping-cart icon_header icon_cart" alt="Carrito de Compra"></i>
+                </a>
+            </div>   
+            
+            <% if( locals.isLogged ) { %>
+                <div class="contenedor-user">
+                    <img src="/users/<%= userLogged.avatar %>" alt="" class="header_image_user">
+                    <p class="hi"> Hi <%= userLogged.name %> </p>
+                    <div class="menu-user-logged">
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="/user/profile">My profile</a>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <a class="dropdown-item" href="/user/logout" id="logout">Logout</a>
+                        </ul>
+                    </div>
+                   
+                </div>
+            <% } else {  %>
+                <div class="contenedor-user sin-loggear">
+                    
+                        <a href="/user/login">   
+                            <i class="fas fa-user icon_header icon_user" alt="Iniciar Sesion"> </i>
+                        </a>
+                    <p class="header_is_register"> </p>
+                </div>
+             <% } %>
+        </nav>
+    </section>
+
+    <nav class="header_container_items">
+        <ul>
+                <li><a href="/products" class="nav-menu-desktop">Todos</a> </li>
+                <li><a href="/products/listarProducts?buscador_home=hombre" class="nav-menu-desktop">Hombre</a> </li>
+                <li><a href="/products/listarProducts?buscador_home=mujer" class="nav-menu-desktop">Mujer</a> </li>
+                <li><a href="/products/listarProducts?buscador_home=niño" class="nav-menu-desktop">Niño</a> </li>
+                <li><a href="/products/listarProducts?buscador_home=lente" class="nav-menu-desktop">Lentes</a> </li>
+                <li><a href="/products/listarProducts?buscador_home=gorra" class="nav-menu-desktop">Gorras</a> </li>
+                <li><a href="/products/listarProducts?buscador_home=chaleco" class="nav-menu-desktop">Chaleco</a> </li>
+        </ul>
+        </nav>
+
+
+</header>
+
+<script>
+ 
+    const menuBtn = document.querySelector('.contenedor-hamburguesa');
+    const menuOverlay = document.querySelector('.menu-overlay');
+    const menuOptions = document.querySelector('.menu-options');
+    
+    menuBtn.addEventListener('click', () => {
+        /* menuOptions.style.display = 'block'; */
+        menuOverlay.classList.toggle('active');
+        menuOptions.classList.toggle('active');
+    });
+
+    // para el usuario loggeado 
+
+    const header_image_user = document.querySelector('.header_image_user'); 
+    const menu_user_logged =  document.querySelector('.menu-user-logged')
+    header_image_user.addEventListener('click', ()=>{
+        menu_user_logged.classList.toggle('active')
+    })
+
+
+    /***   logout  ***/
+    const logout = document.getElementById('logout');
+    logout.addEventListener('click', (e)=>{
+        e.preventDefault();
+        let timerInterval
+        Swal.fire({
+        title: 'Gracias por su visita!',
+        html: 'Hasta la proxima ',
+        timer: 2000,
+        timerProgressBar: true,
+        didOpen: () => {
+            Swal.showLoading()
+            const b = Swal.getHtmlContainer().querySelector('b')
+            timerInterval = setInterval(() => {
+            b.textContent = Swal.getTimerLeft()
+            }, 100)
+        },
+        willClose: () => {
+            clearInterval(timerInterval)
+            window.location.href = '/user/logout';
+        }
+        }).then((result) => {
+        /* Read more about handling dismissals below */
+        if (result.dismiss === Swal.DismissReason.timer) {
+            console.log('I was closed by the timer')
+        }
+        })
+
+
+    })
+
+
+
+</script>

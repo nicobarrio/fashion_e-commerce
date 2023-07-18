@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%-  include('../partials/head.ejs', { css_files: ["editUser"] })%>
+
+<!--     <link href="/css/login.css" rel ="stylesheet">
+ --></head>
+
+<body>
+
+    <%- include('../partials/header.ejs') %>
+
+    <main>
+                               <!--         REGISTRO DE USUARIOS      -->  
+      <section class="contenedor_register">
+            <div class="register_form_container">
+
+                <p class="titulo-register">
+                    Editar cuenta de <strong class="title-user"><%= user.name %> <%= user.last_name %> </strong> 
+                </p>
+
+                <form action="/user/edit" class="registerform flex-col formEditUser" method="post" enctype="multipart/form-data" id="formEditUser">
+
+                    <input type="text" id="name" name="name"  placeholder="Ingresa tu nombre" 
+                    class= " input <%= locals.errors && errors.name ? 'isInvalid' : null %>" value="<%= locals.old ? old.name : user.name %>">
+                    <div></div>
+                    <% if( locals.errors && errors.name){ %>
+                       <small class="errors"> *<%= errors.name.msg %> </small> 
+                    <% } %>
+
+
+                    <input type="text" id="lastname" name="lastName" placeholder="Ingresa tu apellido" 
+                    class= "input <%= locals.errors && errors.lastName? 'isInvalid' : null %>"  value="<%= locals.old ? old.lastName : user.last_name %>">
+                    <div></div>
+                    <% if( locals.errors && errors.lastName){ %>
+                        <small class="errors"> *<%= errors.lastName.msg %> </small> 
+                     <% } %>
+
+                    <input type="email" id="email" name="email" placeholder="Ingresa tu email" class= "input
+                    <%= locals.errors && errors.email ? 'isInvalid' : null %>" value="<%= locals.old ? old.email : user.email %>" readonly>
+                    <div></div>
+                    <% if( locals.errors && errors.email){ %>
+                        <small class="errors"> *<%= errors.email.msg %> </small> 
+                     <% } %>
+
+                    <input type="password" id="pass" name="password" placeholder="Ingresa tu contraseña" class= "input
+                    <%= locals.errors && errors.password ? 'isInvalid' : null %>" value="<%= locals.old ? old.password : null %>">
+                    <div></div>
+                    <% if( locals.errors && errors.password) { %>
+                        <small class="errors"> *<%= errors.password.msg %> </small> 
+                     <% } %>
+
+                    <input type="password" id="passConfirm" name="passConfirm" placeholder="Confirma tu contraseña" class= "input
+                    <%= locals.errors && errors.passConfirm ? 'isInvalid' : null %>" value="<%= locals.old ? old.passConfirm: null %>">
+                    <div></div>
+                    <% if( locals.errors && errors.passConfirm) { %>
+                        <small class="errors"> *<%= errors.passConfirm.msg %> </small> 
+                     <% } %>
+
+                    <p> Selecciona una imagen de perfil:</p>
+                    <input type="file" id="" name="userImage" class= "input input_image <%= locals.errors && errors.userImage ? 'isInvalid' : null %>" > 
+                    <div></div>
+                    <% if( locals.errors && errors.userImage) { %>
+                        <small class="errors" > *<%= errors.userImage.msg %> </small> 
+                     <% } %>
+         
+                    <button type="submit" id="btn_edit_user"> Editar cuenta </button>
+                </form>
+                    
+
+            </div>
+        </section>
+    </main>
+
+    <%-  include('../partials/footer.ejs')   %>
+    <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
+    <script src="/js/editUsersValidation.js"></script>
+
+</body>
+</html>

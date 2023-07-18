@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%-  include('./partials/head.ejs', { css_files: ["carrito"] })%>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+
+<body>
+
+    <%- include('./partials/header.ejs') %>
+
+    <main class="contenedor-main">
+
+        <section class="checkout">
+            
+                
+                <div>
+                <div class="directory">
+                    <a href=>Carrito<i class="fa-solid fa-greater-than"></i></a>
+                    <p>Información<i class="fa-solid fa-greater-than"></i></p>
+                    <p>Pago</p>
+                </div>
+            </div>
+
+            <div class="product" id="productos-carrito">
+                <!-- Aquí se mostrarán los productos del carrito -->
+            </div>
+              
+
+
+            <div class="contenedor-precio-total">
+                <br>
+                <div class="subtotal-price">
+                    <p>Subtotal</p>
+                    <p style="margin-left: auto;">$34.499</p>
+                </div>
+                <div class="delivery-price">
+                    <p>Envío</p>
+                    <p class="free">Gratis</p>
+                </div>
+                <div class="total-price">
+                    <p>Total</p>
+                    <p class="total"></p>
+                </div>
+                <a href="/carrito/compraFinalizada" class="buy_button ">Comprar</a>
+
+            </div>
+        </section>
+
+      
+    </main>
+    
+    <%-  include('./partials/footer.ejs')   %>
+<script src="/js/carritoView2.js"></script>
+</body>
+</html>

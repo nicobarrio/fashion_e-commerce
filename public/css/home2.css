@@ -1,0 +1,10 @@
+
+@media(min-width:1024px){
+    .img-product{
+        width: 63%;
+    }
+
+    .card:hover{
+        cursor: pointer;
+    }
+}

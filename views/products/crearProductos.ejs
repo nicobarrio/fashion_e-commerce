@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%-  include('../partials/head.ejs', { css_files: ["adminCrearProdu"] })%>
+
+
+<body>
+   
+     <%- include('../partials/header.ejs') %> 
+
+    <main>
+
+        <h2 class="title-edit"> Crear Producto </h2>
+
+        <form action="/products" method="POST" enctype="multipart/form-data" id="formCreateProd" class="formulario">
+
+            <div class="contenedor">
+                
+                <div class="contenedor-nombreProdu flex-col container-input">
+                    <label>Nombre del Producto:</label>
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre del producto" class="nombreProducto inputstyle <%= locals.errors && errors.nombre ? 'isInvalid' : null %>"
+                    value="<%= locals.old ? old.nombre : null %>">
+                </div>
+                <% if( locals.errors && errors.nombre){ %>
+                    <small class="errors"> *<%= errors.nombre.msg %> </small> 
+                 <% } %>
+               
+                <div class="contenedor-descripcion flex-col container-input">
+                    <label for="">Descripcion del Producto</label>
+                    <textarea name="descripcion" id="descripcion" cols="30" rows="10" placeholder="Descripcion del producto" class="descripcion inputstyle <%= locals.errors && errors.descripcion? 'isInvalid' : null %>"
+                    ><%= locals.old ? old.descripcion : null %></textarea>
+                </div>
+                <% if( locals.errors && errors.descripcion){ %>
+                    <small class="errors"> *<%= errors.descripcion.msg %> </small> 
+                 <% } %>
+                
+                <div class="contenedor-img flex-col container-input">
+                    <label>Imagen Principal del Producto:</label>
+                    <input type="file" name="file_img" id="file_img" placeholder="Sube la imagen" class="img
+                   <%= locals.errors && errors.file_img ? 'isInvalid' : null %>"
+                    >
+                </div>
+                <% if( locals.errors && errors.file_img){ %>
+                    <small class="errors"> *<%= errors.file_img.msg %> </small> 
+                 <% } %>
+
+                <div class="contenedor-img flex-col container-input">
+                    <label>Imagenes Secundarias del Producto:</label>
+                    <input type="file" name="files_img" id="files_img" placeholder="Sube las imagenes" class="img
+                    <%= locals.errors && errors.files_img ? 'isInvalid' : null %>"
+                    multiple max="4" > 
+                </div>
+                <% if( locals.errors && errors.files_img){ %>
+                    <small class="errors"> *<%= errors.files_img.msg %> </small> 
+                 <% } %>
+
+
+                <div class="contenedor-categorias flex-col container-input">
+                    <label class=" sub-contenedor">Categorias:</label>
+                    <select name="category" id="category" class="categorias 
+                        <%= locals.errors && errors.category? 'isInvalid' : null %>" 
+                    > 
+                        Categorias
+                        <% if(locals.old && old.category){ %> 
+                            <% Categories.forEach((category)=>{  %>
+                                <option value="<%= category.idcategory_product %>"
+                                    <% if( category.idcategory_product == old.category ){ %>
+                                        selected
+                                    <% } %>
+                                    >
+                                    <%= category.category.toUpperCase() %></option>
+                            <% }) %>
+
+                        <% }else{ %>
+                        <option value="" selected disabled>Elige una categoria </option>
+                        <% Categories.forEach((category)=>{  %>
+                            <option value="<%= category.idcategory_product %>">
+                                <%= category.category.toUpperCase() %></option>
+                        <% }) } %>
+                    </select>
+                </div>
+                        <% if( locals.errors && errors.category){ %>
+                            <small class="errors"> *<%= errors.category.msg %> </small> 
+                         <% } %>
+
+
+                <div class="contenedor-categorias flex-col container-input">
+                    <label class=" sub-contenedor">Marcas:</label>
+                    <select name="marca" id="marca" class="categorias
+                    <%= locals.errors && errors.marca ? 'isInvalid' : null %>
+                    "> Categorias
+                    <% if(locals.old && old.marca){ %> 
+                        <% Brands.forEach((brand)=>{  %>
+                            <option value="<%= brand.brand_id %>"
+                                <% if( brand.brand_id == old.marca ){ %>
+                                    selected
+                                <% } %>
+                                >
+                                <%= brand.brand_name.toUpperCase() %></option>
+                        <% }) %>
+
+                    <% }else{ %>
+                        <option value="" selected disabled> Elige una marca </option>
+                        <% Brands.forEach((brand)=>{  %>
+                            <option value="<%= brand.brand_id %>"><%= brand.brand_name.toUpperCase() %></option>
+                        <% })} %>
+                    </select>
+                </div>
+                <% if( locals.errors && errors.marca){ %>
+                    <small class="errors"> *<%= errors.marca.msg %> </small> 
+                <% } %>
+
+
+
+                <div class="contenedor-prendas flex-col container-input">
+                        <p class="categoria-prenda">Tipos de prendas:</p> <br>
+                    <% if(locals.old && old.tipo){ %> 
+                        <% Clothes.forEach((clothe)=>{  %>
+                            <div class="prendas">
+                            <input type="radio" name="tipo" id="tipo" placeholder="" class="<%= locals.errors && errors.tipo ? 'isInvalid' : null %>"
+                             value="<%= clothe.id %>"
+                                <% if( clothe.id == old.tipo ){ %>
+                                    checked
+                                <% } %>
+                                >
+                                <%= clothe.type.toUpperCase() %>
+                            </div>
+                        <% }) %>
+
+                    <% }else{  %>
+
+                    <% Clothes.forEach((clothe)=>{ %>
+                        <div class="prendas">
+
+                        <input type="radio" name="tipo" id="tipo" placeholder="" class="<%= locals.errors && errors.tipo ? 'isInvalid' : null %>"
+                         value="<%= clothe.id %>"> <%= clothe.type.toUpperCase() %>
+                        </div>
+
+                    <%  })} %>
+                </div>
+                <div id="tipoErrorContainer"></div>
+
+                    <% if( locals.errors && errors.tipo){ %>
+                        <small class="errors"> *<%= errors.tipo.msg %> </small> 
+                     <% } %>
+
+
+                <div class="contenedor-talles">
+                    <label class="categoria-talles">Talles:</label>
+                    <% if(locals.old && old.talle){ %> 
+                        <% Waists.forEach((waist)=>{  %>
+                            <div class="talles">
+                                <input type="radio" name="talle" id="talle" placeholder="" class="
+                                <%= locals.errors && errors.talle ? 'isInvalid' : null %>"
+                                value="<%= waist.id %>"
+                                    <% if( waist.id == old.talle ){ %>
+                                        checked
+                                    <% } %>
+                                    />
+                                    <%= waist.waist.toUpperCase() %>
+                            </div>
+                        <% }) %>
+
+                    <% }else{  %>
+
+                    <% Waists.forEach((waist)=>{  %>
+                    <div class="talles">
+                        <input type="radio" name="talle" id="talle" placeholder="" class="
+                        <%= locals.errors && errors.talle ? 'isInvalid' : null %>" 
+                        value="<%=waist.id%>" /> <%= waist.waist.toUpperCase() %>
+                    </div>
+                    <%})} %>
+                    
+                </div>
+                <% if( locals.errors && errors.talle){ %>
+                    <small class="errors"> *<%= errors.talle.msg %> </small> 
+                <% } %>
+                <div id="tallesErrorContainer"></div>
+
+                <div class="contenedor-precio flex-col container-input">
+                    <label>Precio:</label>
+                    <input type="text" name="precio" id="precio" placeholder="$" class="inputstyle
+                    <%= locals.errors && errors.precio ? 'isInvalid' : null %>" 
+                    value="<%= locals.old ? old.precio : null %>"> 
+                </div>
+                    <% if( locals.errors && errors.precio){ %>
+                        <small class="errors"> *<%= errors.precio.msg %> </small> 
+                     <% } %>
+
+
+
+                <div class="contenedor-btn">
+                    <button class="btn-crear" type="submit" id="btn_crear_prod">CREAR PRODUCTO</button>
+                </div>
+           
+        </div>
+        </form>
+    </main>
+
+
+      <%-  include('../partials/footer.ejs')   %>  
+<script src="https://unpkg.com/validator@latest/validator.min.js"></script>
+<script src="/js/productsValidationFrontCreate.js"></script>
+</body>
+</html>

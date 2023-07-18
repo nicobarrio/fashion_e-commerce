@@ -1,0 +1,135 @@
+
+.container-productos{
+    align-items: center;
+}
+
+.card{
+    width: 65%;
+    height: 175px;
+}
+
+.img-product{
+    border-radius: 0;
+    width: 110px;
+    height: 120px;
+}
+
+.producto-precio, .producto-nombre{
+    font-size: 12px;
+}
+
+.main-art-prducto{
+    display: none;
+}
+
+.nav-favorites{
+    display: none;
+}
+
+.title-favorites{
+    margin-top: 30px;
+}
+
+.btn-elegir{
+    padding: 10px 30px;
+    border: none;
+    border-radius: 20px;
+    background-color: #9e9acb;
+    color: #ffff;
+    margin: 15px;
+    font-weight: bolder;
+    transition: all ease 0.5s;
+}
+
+.btn-elegir:hover{
+    cursor: pointer;
+    box-shadow: 1px 1px 3px black;
+    transform: translate(1);
+}
+
+.card2{
+    position: relative;
+}
+
+.form-delete{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background-color: transparent;
+
+}
+
+.form-delete button{
+    background-color: transparent;
+    border-radius: 50%;
+    padding: 50%;
+    color: red;
+    border: 1px solid red;
+}
+
+.form-delete button:hover{
+    background-color: red;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+@media (min-width: 1024px){
+    main{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .section-productos{
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .container-productos{
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .card{
+        width: 25%;
+    }
+    .section_profile_user{
+        background-color: transparent;
+        width: 20%;
+    }
+
+    .profileUser{
+        background-color: transparent;
+        height: 90%;
+    }
+
+    .nav-favorites{
+        display: block;
+    }
+
+    .nav-favorites ul{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: space-evenly;
+        gap: 15px;
+        margin-top: 15px;
+    }
+
+    .nav-favorites ul li a:hover{
+        color: #0b0033;
+        border-bottom: 1px solid #0b0033;
+
+    }
+
+    .title-favorites{
+        font-size: 35px;
+    }
+
+    .btn-elegir{
+        font-size: 20px;
+        padding: 15px 30px;
+    }
+}

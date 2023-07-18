@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%-  include('../partials/head.ejs', { css_files: ["home", "listarProductos"] })%>
+
+<body>
+    <%- include('../partials/header.ejs') %>
+
+    <main>
+        <section class="section-productos flex-col">
+            <% if(locals.resultadoBusqueda){ %>
+                <h3> Productos con la palabra: <i>  <%= resultadoBusqueda.toUpperCase() %> </i> </h3>
+            <% }else{  %>
+                <h3>Basado en tu ultima visita</h3>
+            <% } %>
+
+
+            <div class="container-productos flex-col cards-container "> 
+
+                <% if(locals.products.length > 0){ %>
+                
+                    <% products.forEach((p)=>{ %>
+                        <article class="producto card">
+                            <a href="/products/<%= p.idProduct %>" class="enlace">
+                                <!-- <div class="card2"> -->
+                                    <img src="/products/<%= p.imageProduct.image_route %>" alt="" class="img-product">
+                                    <div class="main-art-prducto">
+                                        <p><strong class="producto-precio">$<%= p.price %></strong></p>
+                                        <p class="producto-nombre"><strong><%= p.name %></strong></p>
+                                    </div>
+                                <!-- </div> -->
+                            </a>
+                        </article>
+                    <% }) %>
+                
+                <% }else{ %>
+
+                    <h4 class="unProducts"> No hay productos con la palabra: <em><%= resultadoBusqueda %></em></h4>
+
+                <% } %>
+
+                
+
+
+             </div> 
+        </section>
+    </main>
+    <%-  include('../partials/footer.ejs')   %>
+
+
+</body>
+</html>

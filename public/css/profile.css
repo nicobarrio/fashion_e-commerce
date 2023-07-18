@@ -1,0 +1,224 @@
+
+:root{ 
+
+    /*  PALETA DE COLORES: OPCION RED  */
+        --op1-color-primary-rojo: #f93943; 
+        --op1-color-secondary-rojo: #d1495b ;
+        --op1-color-bg-negro: #1a1423;
+        --op1-color-gris-oscuro: #65655e;
+        --op1-color-gris-claro: #e1e6e1; 
+    
+    /* PALETA DE COLORES: OPCION GREEN */
+        --op2-color-primary-green: #4daa57; 
+        --op2-color-secondary-ligthblue: #1e96fc; 
+        --op2-color-bg-blue-oscuro: #0b0033; 
+        --op2-color-gris-oscuro: #616163;  
+        --op2-color-gris-claro: #e1e6e1; 
+        
+    
+    /* TIPOGRAFIA PROPUESTA */
+        --op1-font-type: 'Roboto', sans-serif;
+        /* @import url('https://fonts.googleapis.com/css2? family= Roboto:wght@300;400;700 & display=swap'); */ 
+        --op2-font-type: 'Lato', sans-serif;
+        /* @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,300&display=swap')*/   
+    }
+    
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: 'Overpass', sans-serif;
+    font-weight: normal;
+    color: #1a1423;
+    background-color: #4daa57;
+}
+
+.errors{
+    color: red;
+    font-style: italic;
+}
+
+.isInvalid{
+    border: solid red 1px !important;
+}
+
+.title{
+    text-align: center;
+}
+
+.title span{
+    color: #85cf7e;
+    font-style: oblique;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.img_profile{
+    padding: 20px;
+    width: 180px;
+    height: 180px;
+    border-radius: 30px;
+    object-fit: cover;
+}
+
+.section_profile_user{
+    border-radius: 30px;
+    background-color: #e4e1e1;
+
+   
+}
+
+.profileUser{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+.buttons-container {
+    margin-bottom: 30px;
+    gap: 10px;
+    align-items: center;
+}
+
+.btn {
+    border: solid 0.5px transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease-in-out;
+    transform: scale(1);
+    font-size: 10px;
+    font-weight: bold;
+    width: 100%;
+}
+
+.buttons-container .edit_button a button:hover, .buttons-container .delete_button form button:hover, .buttons-container .favorites_button a button:hover{
+    cursor: pointer;
+    transform: scale(0.95);
+}
+
+.buttons-container .edit_button a, .buttons-container .favorites_button a {
+    text-decoration: none;
+}
+
+.btn-container{
+    width: 60%;
+}
+
+.btn{
+    padding: 15px;
+}
+
+
+.btn_edit{
+    background-color: #7ac0a3;
+    color: #333333;
+}
+.btn_delete{
+    background-color: #e75a5a;
+    color: #ffffff;
+}
+.btn_favorite{
+    background-color: #9e9acb;
+    color: #000000;
+}
+.btn_create{
+    background-color: #5faed1;
+    color: #333333;
+}
+
+.btn_dashboard{
+    background-color: #246B59;
+    color: #ffffff;
+}
+
+
+/*  TABLETS */
+@media (min-width: 481px){
+
+    .buttons {
+        justify-content: center;
+        gap: 50px;
+    }
+
+    .buttons .edit_button a button, .buttons .delete_button form button, .buttons .favorites_button a button {
+        padding: 10px;
+    }
+  
+    .login_form_container, .register_form_container {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+}
+/* end tablets */
+
+/*  DESKTOP */
+
+@media (min-width: 769px){
+
+    main{
+        display: flex;
+        margin-top: 0vh;
+        flex-direction: column;
+        /* min-height: 70vh; */
+    }
+
+    .profileUser p {
+        font-size: 20px;
+    }    
+
+    .buttons {
+        justify-content: center;
+        gap: 20px;
+    }
+  
+
+}
+/* end desktop */
+
+@media (min-width: 1024px){
+    
+    .section_profile_user{
+        flex-direction: row;
+        justify-content: center; 
+        gap: 10%;
+        align-items: center;
+        background-color: #e4e1e1;
+        padding: 50px 0px;
+        height: 80vh;
+
+    }
+
+    .profileUser{
+        background: #e4e1e1;
+        border: none;
+        border-radius: 20px;
+    }
+
+    .img_profile{
+        border-radius: 30px;
+        width: 300px;
+        height: 250px;
+        object-fit: contain;
+    }
+
+    .title{
+        font-size: 2em;
+    }
+
+    .btn-container{
+        width: 100%;
+    }
+
+    .buttons-container{
+        width: 30%;
+    }
+
+    .btn{
+        font-size: 15px;
+    }
+}

@@ -1,0 +1,69 @@
+:root{
+
+    /*  PALETA DE COLORES: OPCION RED  */
+        --op1-color-primary-rojo: #f93943; 
+        --op1-color-secondary-rojo: #d1495b ;
+        --op1-color-bg-negro: #1a1423;
+        --op1-color-gris-oscuro: #65655e;
+        --op1-color-gris-claro: #e1e6e1; 
+    
+    /* PALETA DE COLORES: OPCION GREEN */
+        --op2-color-primary-green: #4daa57;  
+        --op2-color-secondary-ligthblue: #1e96fc; 
+        --op2-color-bg-blue-oscuro: #0b0033; 
+        --op2-color-gris-oscuro: #616163; 
+        --op2-color-gris-claro: #e1e6e1; 
+        
+    
+    /* TIPOGRAFIA PROPUESTA */
+        --op1-font-type: 'Roboto', sans-serif;
+        /* @import url('https://fonts.googleapis.com/css2? family= Roboto:wght@300;400;700 & display=swap'); */ 
+        --op2-font-type: 'Lato', sans-serif;
+        /* @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,300&display=swap')*/   
+    }
+
+
+* {
+    box-sizing: border-box  ;
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+    min-height: 50vh;
+    background-color: var(--op2-color-bg-blue-oscuro);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('/image/img-fondo-gracias.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.title{
+    text-align: center;
+    color: var(--op2-color-bg-blue-oscuro)
+}
+
+.gracias{
+    width: 150px;
+    height: 120px;
+}
+
+@media(min-width: 769px){
+    .main{
+        margin-top: 0vh;
+    }
+    
+}
+
+@media (min-width: 1024px){
+    .main{
+        margin-top: 0vh;
+    }
+    .gracias{
+        width: 300px;
+        height: 220px;
+    }
+}
