@@ -9,23 +9,24 @@
 
 <!-- </head>
  -->
+
 <body>
 
- <%- include('./partials/header.ejs') %>
+    <%- include('./partials/header.ejs') %>
 
-<!-- SECCION MAIN  -->
+    <!-- SECCION MAIN  -->
     <main class="flex-col">
 
-        <section class="flex-col"> 
+        <section class="flex-col">
 
             <!-- AARTICLE IMAGEN PPAL -->
             <article class="article_ppal">
                 <img src="/image/catego1new.jpg" alt="Cumbre" class="img-principal">
-            </article> 
+            </article>
 
             <article class=" article-principal-laptop">
-                <img src="/image/descanso-1.jpeg" alt="Cumbre" class="img-principal-laptop">
-            </article> 
+                <img src="/image/trekking.jpg" alt="Cumbre" class="img-principal-laptop">
+            </article>
 
             <div class="desktop_imagenes_categorias flex-row">
                 <!-- ARTICLE MAIN HOMBRES  -->
@@ -35,38 +36,53 @@
                         <p>HOMBRES</p>
                     </div>
                 </article>
-            
+
 
                 <!-- ARTICLE MAIN MUJERES  -->
                 <article class="article_ppal">
-                        <img src="/image/cate-mujer3.jpg" alt="Mujeres" class="img-mujeres">
-                        <div class="categoria2-text">
-                            <p>MUJERES</p>
-                        </div>
+                    <img src="/image/cate-mujer3.jpg" alt="Mujeres" class="img-mujeres">
+                    <div class="categoria2-text">
+                        <p>MUJERES</p>
+                    </div>
                 </article>
 
                 <!-- ARTICLE MAIN NIÑOS  -->
                 <article class="article_ppal">
-                        <img src="/image/niño2.jpg" alt="Niños" class="img-niños">
-                        <div class="categoria3-text">
-                            <p>NIÑOS</p>
-                        </div>
+                    <img src="/image/niño2.jpg" alt="Niños" class="img-niños">
+                    <div class="categoria3-text">
+                        <p>NIÑOS</p>
+                    </div>
                 </article>
 
                 <!-- ARTICLE MAIN ACCESORIOS  -->
                 <article class="article_ppal">
-                        <img src="/image/accesorio5.jpg" alt="Accesorios" class="img-acc">
-                        <div class="categoria4-text">
-                            <p>ACCESORIOS</p>
-                        </div>
+                    <img src="/image/accesorio5.jpg" alt="Accesorios" class="img-acc">
+                    <div class="categoria4-text">
+                        <p>ACCESORIOS</p>
+                    </div>
                 </article>
 
             </div>
         </section>
 
+        <section class="categories">
+            <a href="/products/listarProducts?buscador_home=hombre">
+                <img src="/image/men.jpg" alt="men" class="men">
+                <p>Hombre</p>
+            </a>
+            <a href="/products/listarProducts?buscador_home=mujer">
+                <img src="/image/women.jpg" alt="women" class="women">
+                <p>Mujer</p>
+            </a>
+            <a href="/products/listarProducts?buscador_home=niño">
+                <img src="/image/kids.jpg" alt="kids" class="kids">
+                <p>Niños</p>
+            </a>
+        </section>
+
         <section class="section-productos flex-col">
-            <h3>Basado en tu ultima visita</h3>
-            <div class="container-productos flex-col "> 
+            <h3>Recomendados</h3>
+            <div class="container-productos flex-col ">
                 <article class="producto card">
                     <div class="card2">
                         <img src="/image/pantalon_arena.jpg" alt="" class="img-product">
@@ -79,11 +95,11 @@
 
                 <article class="producto card">
                     <div class="card2">
-                    <img src="/image/pantalon_mawenzi.jpg" alt="" class="img-product">
-                    <div class="main-art-prducto">
-                        <p><strong class="producto-precio">$59235</strong></p>
-                        <p class="producto-nombre"><strong> Pantalon Mawenzi </strong></p> 
-                    </div>
+                        <img src="/image/pantalon_mawenzi.jpg" alt="" class="img-product">
+                        <div class="main-art-prducto">
+                            <p><strong class="producto-precio">$59235</strong></p>
+                            <p class="producto-nombre"><strong> Pantalon Mawenzi </strong></p>
+                        </div>
                     </div>
                 </article>
 
@@ -93,40 +109,44 @@
                         <div class="main-art-prducto">
                             <p><strong class="producto-precio">$32154</strong></p>
                             <p class="producto-nombre"><strong>Calza Ciclon Hombre</strong></p>
-                    </div>
-                    
+                        </div>
+
                     </div>
                 </article>
 
                 <article class="producto card">
                     <div class="card2">
-                        
-                    <img src="/image/campera_ergo.jpg" alt="" class="img-product">
 
-                    <div class="main-art-prducto">
-                        <p><strong class="producto-precio">$32455</strong></p>
-                        <p class="producto-nombre"><strong>Campera Ergo</strong></p>
-                            
-                    </div>
+                        <img src="/image/campera_ergo.jpg" alt="" class="img-product">
+
+                        <div class="main-art-prducto">
+                            <p><strong class="producto-precio">$32455</strong></p>
+                            <p class="producto-nombre"><strong>Campera Ergo</strong></p>
+
+                        </div>
                     </div>
                 </article>
-             </div> 
+            </div>
         </section>
 
         <section class="contenedor-main-somos flex-col">
 
             <div class="main-somos flex-col">
-                <h4>¿QUIENES SOMOS?</h4>
-                <p>Somos Culme, Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, provident earum. Ab id quas eaque? Facilis error officiis illo, molestias neque quo. Expedita sunt inventore iusto in magnam quidem natus.</p>
-                <h4 class="desc-product">Descripcion de nuestro porductos</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam nesciunt, atque accusantium inventore optio dignissimos possimus eveniet nam mollitia voluptate sequi reprehenderit, similique ipsa repudiandae cum doloribus dolores! Quam, dolore?</p>
+                <img src="/image/about.jpg" alt="" class="img_about_us">
+                <div>
+                    <h4>¿QUIENES SOMOS?</h4>
+                    <p>Somos Culme, Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, provident earum.
+                        Ab id quas eaque? Facilis error officiis illo, molestias neque quo. Expedita sunt inventore
+                        iusto in magnam quidem natus.</p>
+                </div>
+
             </div>
 
             <div class="main-registrarse flex-col">
-                <h3>SI TODAVIA NO TENES CUENTA</h3>
-                <a href="/user/login" class="boton-register"> REGISTRARSE </a>
-            </div>   
-            
+                <h3>¿Aún no tienes una cuenta?</h3>
+                <a href="/user/login" class="boton-register"> Registrarse </a>
+            </div>
+
         </section>
     </main>
 

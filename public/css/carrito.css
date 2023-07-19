@@ -46,7 +46,7 @@ body{
     justify-content: center;
     margin-top: 0vh;
     /*background-color: #b2eba5;*/
-    background-color: var(--op2-color-gris-claro);
+    background-color: white;
 }
 
 .directory{
@@ -95,10 +95,10 @@ section.checkout div div.directory a i{
     color: black;
     padding: 4px;
     box-sizing: border-box;
-    border-bottom: solid#8cbc84 1px;  
+    border-bottom: solid#000000 1px;  
     margin-top: 20px;
     margin-bottom: 20px;
-    border-radius: 10px; 
+    border-radius: 50px; 
 }
 
 .customer-data{
@@ -292,7 +292,7 @@ section.checkout div.add-product-2 div.add-product-box img{
 .delivery-price {
     display: flex;
     padding: 0px 0px 20px;
-    border-bottom: solid #8cbc84 1px;
+    border-bottom: solid #000000 1px;
     width: 100%;
 }
 
@@ -360,7 +360,6 @@ section.checkout div.product{
 
 section.checkout div.product img{
     border-radius: 8px;
-    border: solid #8cbc84 1px
 }
 
 /* section.checkout div.product div.product-details i{
@@ -400,11 +399,10 @@ section.checkout div.product div.product-details p.product-price{
     flex-direction: column;
     justify-content: center;
     margin-top: 0vh;
-    background-color: #b2eba5;
+    background-color: #ffffff;
     color: black;
    /*  padding: 20px; */
     box-sizing: border-box;
-    border-bottom: solid #8cbc84 1px;
     margin-top: 20px;
     margin-bottom: 20px;
     border-radius: 10px;
@@ -422,7 +420,6 @@ section.checkout div.product div.product-details p.product-price{
     flex-basis: 100%;
     display: flex;
     align-items: center;
-    border-bottom: solid #8cbc84 1px;
     padding-bottom: 10px;
     margin-bottom: 10px;
   }
@@ -452,7 +449,7 @@ section.checkout div.product div.product-details p.product-price{
 
 .quantity-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   padding: 5px 20px;
 }
@@ -473,20 +470,11 @@ section.checkout div.product div.product-details p.product-price{
 
 .eliminar-producto i{
     font-size: 25px;
-    color: red;
-    border-radius: 50%;
-    border: 1px solid red;
+    color: rgb(0, 0, 0);
     padding: 10px;
-    transition: all 0.5s ease;
-}
-
-.eliminar-producto i:hover{
     cursor: pointer;
-    background-color: red;
-    color: white;
-    transform: translateY(1);
-
 }
+
 
 .anchor_img{
     text-decoration: none;
@@ -517,16 +505,15 @@ section.checkout div.product div.product-details p.product-price{
   }
 
   .buy_button{
-    color:#ffff;
-    background-color: #ff793f;
+    color:#292929;
+    background-color: #f4f4f4;
     transition-property: background-color, color;
     transition-duration: 0.5s;
     margin-top: 30px;
-    font-weight: bold;
-    font-size: 20px;
-    width: 50%;
+    font-size: 16px;
+    width: 30%;
     padding: 12px 25px;
-    border: solid white 1px;
+    border: solid #292929 1px;
     border-radius: 20px;
     cursor: pointer;
     transition: all 0.3s ease-in;
@@ -535,9 +522,8 @@ section.checkout div.product div.product-details p.product-price{
 }
 
 .buy_button:hover{
-    transform: scale(1.1);
-    background-color: var(--op2-color-bg-blue-oscuro);
-    color: var(--op2-color-gris-claro);
+    background-color: #292929;
+    color: white;
     border-color: var(--op2-color-bg-blue-oscuro);
 }
 
@@ -621,7 +607,7 @@ section.checkout div div.directory a i{
     padding-left: 80px;
     padding-right: 80px;
     box-sizing: border-box;
-    border-bottom: solid#8cbc84 1px;
+    border-bottom: solid#000000 1px;
 }
 
 .customer-data{
@@ -815,7 +801,7 @@ section.checkout div.add-product-2 div.add-product-box img{
 .delivery-price {
     display: flex;
     padding: 0px 0px 20px;
-    border-bottom: solid #8cbc84 1px;
+    border-bottom: solid #000000 1px;
     width: 100%;
 }
 
@@ -883,7 +869,6 @@ section.checkout div.product{
 
 section.checkout div.product img{
     border-radius: 8px;
-    border: solid #8cbc84 1px
 }
 
 
@@ -981,11 +966,11 @@ section.checkout div.product div.product-details p.product-price{
     }
 
     .checkout{
-        width: 43%;
-        background-color: #b2eba5;
+        width: 70%;
+        background-color: #f4f4f4;
         color: black;
         /*border-left: solid #8cbc84 1px;*/
-        border-bottom: solid#8cbc84 0px;
+        border-bottom: solid#000000 0px;
         padding: 40px;
         padding-top: 70px;
         box-sizing: border-box;
@@ -995,7 +980,7 @@ section.checkout div.product div.product-details p.product-price{
         display: flex;
         gap: 20px;
         padding: 10px 0px 10px;
-        border-bottom: solid#8cbc84 1px;
+        border-bottom: solid#000000 1px;
         width: 100%;
     }
       
@@ -1076,7 +1061,7 @@ section.checkout div.product div.product-details p.product-price{
     .delivery-price {
         display: flex;
         padding: 20px 0px 20px;
-        border-bottom: solid #8cbc84 1px;
+        border-bottom: solid #000000 1px;
         width: 100%;
     }
     
@@ -1191,7 +1176,6 @@ section.checkout div.product div.product-details p.product-price{
     
     section.checkout div.product img{
         border-radius: 8px;
-        border: solid #8cbc84 1px
     }
     
     
@@ -1225,27 +1209,18 @@ section.checkout div.product div.product-details p.product-price{
     }
     
     .eliminar-producto i{
-        font-size: 25px;
-        color: red;
-        border-radius: 50%;
-        border: 1px solid red;
+        font-size: 20px;
+        color: rgb(0, 0, 0);
         padding: 10px;
-        transition: all 0.5s ease;
-    }
-    
-    .eliminar-producto i:hover{
         cursor: pointer;
-        color: rgb(250, 81, 81);
-        transform: scale(1.2);
-    
     }
+
 
     .decrease-quantity,
 .increase-quantity {
   display: inline-block;
-  padding: 5px 10px;
-  border: none;
-  background-color:  #c09191;
+  border: 1px solid #292929;
+  background-color:  #f4f4f4;
   color: #333;
   font-size: 16px;
   cursor: pointer;
@@ -1254,8 +1229,15 @@ section.checkout div.product div.product-details p.product-price{
 
 .decrease-quantity:hover,
 .increase-quantity:hover {
-  background-color: #e6e6fa;
-  transform: scale(1.1);
+  background-color: #292929;
+  color: white;
+}
+
+.decrease-quantity {
+    padding: 6px 12.5px;
+}
+.increase-quantity {
+    padding: 6px 10px;
 }
 
 .decrease-quantity:active,
@@ -1274,6 +1256,7 @@ section.checkout div.product div.product-details p.product-price{
 
 section.checkout div.product div.product-details p.product-title , section.checkout div.product div.product-details p.product-price{
     font-size: 20px;
+    margin-block: auto;
 
 }
 

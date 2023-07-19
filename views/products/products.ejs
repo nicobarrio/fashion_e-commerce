@@ -8,7 +8,7 @@
 
     <main>
         <section class="section-productos flex-col">
-            <h3> TODOS LOS PRODUCTOS  </h3>
+            <h3> Todos los productos </h3>
             <div class="container-productos flex-col cards-container "> 
 
                 <%  products.forEach((p)=>{ %>
@@ -18,8 +18,8 @@
                          <!-- <div class="card2"> --> 
                             <img src="/products/<%= p.imageProduct.image_route %>" alt="" class="img-product">
                             <div class="main-art-prducto">
-                                <p><strong class="producto-precio">$<%= p.price %></strong></p>
                                 <p class="producto-nombre"><strong><%= p.name %></strong></p>
+                                <p><strong class="producto-precio">$<%= p.price %></strong></p>
                             </div>
                          <!-- </div>  -->
                     </a>

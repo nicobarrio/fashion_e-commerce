@@ -27,21 +27,22 @@
 
         <div class="contenedor-logo">
             <a href="/">
-                <img src="/image/logo-culmen.png" alt="Logo Culmen" class="logo">
+                <img src="/image/logo-culmen-negro.png" alt="Logo Culmen" class="logo">
             </a>
         </div>
 
-        <nav class="nav-bar flex-row">
+        <nav class="nav-bar ">
             <div class="contenedor-buscador">
 
                 <form action="/products/listarProducts" method="get" class="form_buscador">
-                    <input type="text" name="buscador_home" id="buscador_home" class="buscador_home" placeholder="Busque su producto...">
+                    <input type="text" name="buscador_home" id="buscador_home" class="buscador_home" placeholder="Buscar">
                     <button type="submit" class="btn_buscador">
-                           <i class="fas fa-search icon_header lupita"></i>
+                           <i class="fas fa-search icon_searcher"></i>
                     </button>
                 </form>
             </div>
-            
+
+            <div class="user" style="display: flex; flex-direction: row">
             <div class="contenedor-carrito">
                 <a href="/carrito">
                     <i class="fas fa-shopping-cart icon_header icon_cart" alt="Carrito de Compra"></i>
@@ -51,7 +52,7 @@
             <% if( locals.isLogged ) { %>
                 <div class="contenedor-user">
                     <img src="/users/<%= userLogged.avatar %>" alt="" class="header_image_user">
-                    <p class="hi"> Hi <%= userLogged.name %> </p>
+                    <p class="hi"> <%= userLogged.name %> </p>
                     <div class="menu-user-logged">
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="/user/profile">My profile</a>
@@ -71,19 +72,21 @@
                         </a>
                     <p class="header_is_register"> </p>
                 </div>
-             <% } %>
+             <% } %>    
+            </div>
+            
+            
         </nav>
     </section>
 
     <nav class="header_container_items">
         <ul>
-                <li><a href="/products" class="nav-menu-desktop">Todos</a> </li>
                 <li><a href="/products/listarProducts?buscador_home=hombre" class="nav-menu-desktop">Hombre</a> </li>
                 <li><a href="/products/listarProducts?buscador_home=mujer" class="nav-menu-desktop">Mujer</a> </li>
-                <li><a href="/products/listarProducts?buscador_home=niño" class="nav-menu-desktop">Niño</a> </li>
-                <li><a href="/products/listarProducts?buscador_home=lente" class="nav-menu-desktop">Lentes</a> </li>
-                <li><a href="/products/listarProducts?buscador_home=gorra" class="nav-menu-desktop">Gorras</a> </li>
-                <li><a href="/products/listarProducts?buscador_home=chaleco" class="nav-menu-desktop">Chaleco</a> </li>
+                <li><a href="/products/listarProducts?buscador_home=niño" class="nav-menu-desktop">Niños</a> </li>
+                <li><a href="/products/listarProducts?buscador_home=lente" class="nav-menu-desktop">Sunglasses</a> </li>
+                <li><a href="/products/listarProducts?buscador_home=gorra" class="nav-menu-desktop">Caps</a> </li>
+                <li><a href="/products" class="nav-menu-desktop">Ver todo</a> </li>
         </ul>
         </nav>
 

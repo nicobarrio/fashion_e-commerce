@@ -33,7 +33,7 @@ body {
     font-family: 'Overpass', sans-serif;
     font-weight: normal;
     color: #1a1423;
-    background-color: #4daa57;
+    background-color: #ffffff;
 }
 
 .errors{
@@ -50,23 +50,20 @@ body {
 }
 
 .title span{
-    color: #85cf7e;
-    font-style: oblique;
+    color: #000000;
     font-weight: bold;
-    text-transform: uppercase;
 }
 
 .img_profile{
     padding: 20px;
     width: 180px;
     height: 180px;
-    border-radius: 30px;
-    object-fit: cover;
+    border-radius: 50%;
 }
 
 .section_profile_user{
     border-radius: 30px;
-    background-color: #e4e1e1;
+    background-color: #ffffff;
 
    
 }
@@ -83,21 +80,25 @@ body {
     margin-bottom: 30px;
     gap: 10px;
     align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 .btn {
     border: solid 0.5px transparent;
-    border-radius: 15px;
+    border-radius: 100px;
     transition: all 0.3s ease-in-out;
     transform: scale(1);
     font-size: 10px;
-    font-weight: bold;
     width: 100%;
 }
 
 .buttons-container .edit_button a button:hover, .buttons-container .delete_button form button:hover, .buttons-container .favorites_button a button:hover{
     cursor: pointer;
-    transform: scale(0.95);
+    background-color: #242424;
+    border: 1px solid #242424;
+    color: white;
 }
 
 .buttons-container .edit_button a, .buttons-container .favorites_button a {
@@ -114,25 +115,30 @@ body {
 
 
 .btn_edit{
-    background-color: #7ac0a3;
-    color: #333333;
+    background-color: white;
+    border: 1px solid #242424;
+    color: #242424;
 }
 .btn_delete{
-    background-color: #e75a5a;
-    color: #ffffff;
+    background-color: white;
+    border: 1px solid #242424;
+    color: #242424;
 }
 .btn_favorite{
-    background-color: #9e9acb;
-    color: #000000;
+    background-color: white;
+    border: 1px solid #242424;
+    color: #242424;
 }
 .btn_create{
-    background-color: #5faed1;
-    color: #333333;
+    background-color: white;
+    border: 1px solid #242424;
+    color: #242424;
 }
 
 .btn_dashboard{
-    background-color: #246B59;
-    color: #ffffff;
+    background-color: white;
+    border: 1px solid #242424;
+    color: #242424;
 }
 
 
@@ -168,42 +174,35 @@ body {
     }
 
     .profileUser p {
-        font-size: 20px;
+        font-size: 14px;
     }    
 
     .buttons {
         justify-content: center;
         gap: 20px;
     }
-  
-
-}
-/* end desktop */
-
-@media (min-width: 1024px){
     
     .section_profile_user{
         flex-direction: row;
         justify-content: center; 
         gap: 10%;
         align-items: center;
-        background-color: #e4e1e1;
+        background-color: #ffffff;
         padding: 50px 0px;
         height: 80vh;
 
     }
 
     .profileUser{
-        background: #e4e1e1;
+        background: #ffffff;
         border: none;
         border-radius: 20px;
     }
 
     .img_profile{
-        border-radius: 30px;
-        width: 300px;
-        height: 250px;
-        object-fit: contain;
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
     }
 
     .title{
@@ -215,7 +214,9 @@ body {
     }
 
     .buttons-container{
-        width: 30%;
+            width: 90%;
+            margin: auto;
+            margin-bottom: 5%
     }
 
     .btn{

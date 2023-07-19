@@ -88,8 +88,8 @@
 
                     <% }else{ %>
                         <br>
+                        <p>Para comprar el producto debe loggearse</p>
                         <br>
-                        <h3>Para comprar el producto debe loggearse</h3>
                         <a href="/user/login"> 
                             <button class="buy_button" type="button">Ingresar </button>  
                         </a>
@@ -106,7 +106,6 @@
         <% if( locals.userLogged && (locals.userLogged.is_admin == 0) ){ %>
             <div>
                 <form action="/products/<%= elegido.idProduct %>?_method=DELETE" method="post" class="form_buttons" id="form_editar_eliminar">
-                    <p>Permisos de administrador:</p>
                     <a href="/products/<%= elegido.idProduct %>/editar" class="edit_button">Editar Producto</a>
                     <button type="submit" class="delete_button"> Eliminar Producto </button>
                 </form>
@@ -114,8 +113,8 @@
         <% } %>
 <% } %>
 <div class="review_section">
-    <p class="title_reviews">Reviews</p>
     <div class="post_review_container">
+        <p class="title_reviews">Reviews</p>
         <p class="num_reviews">Escribí una reseña</p>
         <form action="" method="POST" enctype="multipart/form-data">
             <input type="text" placeholder="Titulo">

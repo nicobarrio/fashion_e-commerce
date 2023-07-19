@@ -90,12 +90,13 @@
  /*  SECCION DE PRODUCTOS */
 .section-productos {
     text-align: center;
-   background-color: var(--op1-color-gris-claro);
-    
+    background-color: #f4f4f4;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
 }
 
 .section-productos h3 {
-    margin-top: 10px;
+    margin-bottom: 20px;
     color: var(--op2-color-primary-green);
     color: var(--op2-color-bg-blue-oscuro)
 }
@@ -106,12 +107,7 @@
 
 .producto {
     margin: 10px;
-    /*background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);*/    
-    /* background-image: linear-gradient(45deg, #FFB6C1, #87CEEB); */
-    box-shadow: 10px 10px 12px rgba(0, 0, 0, 0.2);
-    
     border-radius: 20px;
-    transition: all .3s;
     background-color: white;
 }
 
@@ -126,16 +122,7 @@
 .card2{
     background-color: white;
     border-radius: 20px;
-    transition: all .2s;
 }
-.card:hover {
-    box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
-   }
-
-.card2:hover {
-    transform: scale(0.98);
-    border-radius: 20px;
-   }
 
 .img-product {
     text-align: center;
@@ -145,7 +132,6 @@
 }
 
 .main-art-prducto {
-    border-top: 1px solid var(--op2-color-bg-blue-oscuro);
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -155,42 +141,35 @@
     
 }
 
-.producto-precio , .producto-nombre {
-    color: var(--op2-color-bg-blue-oscuro);
-    font-size: 13px;
-}
-
 /* SECCION DE SOMOS Y REGISTRARSE */
 
 .contenedor-main-somos {
-    background-color: #ebebeb;
-    color: black;
+    background-color: black;
+    color: white;
     text-align: center;
     align-items: center;
-    
+    margin-top: 10vh;
+    border-radius: 50px;
 }
 
 .main-somos {
+    display: flex;
+    flex-direction: row;
     text-align: justify;
     align-items: center;
     padding: 15px;
     width: 100%;
-    background-image: url(/image/amigos-10.jpeg);
-    background-size: cover;
-    background-attachment: fixed;
+    background-color: black;
     gap: 20px;
+    height: 100vh;
+    border-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
 }
 
 .main-somos p, .main-somos h4{
-    border-radius: 20px;
-    background-color: rgb(0 0 0 / 90%);
-    color: var(--op2-color-gris-claro);
     padding: 15px;
     font-family: var(--op2-font-type);
-}
-
-.main-somos p{
-    font-style: oblique;
 }
 
 .main-somos h3 {
@@ -199,35 +178,35 @@
 }
 
 .main-registrarse{
-    background-color: var(--op2-color-primary-green);
+    background-color:#f4f4f4;
     width: 100%;
-    padding: 15px;
+    padding: 10vh;
+    padding-bottom: 30px;
+}
+
+.main-registrarse h3 {
+    color: black;
 }
 
 .boton-register {
     margin: 10px auto;
-    background-color: var(--op2-color-bg-blue-oscuro);
-    background-color: var(--op2-color-secondary-ligthblue);
-    color: var(--op2-color-gris-claro);
-    width: 150px;
+    background-color: #292929;
+    border: 1px solid #545454;
+    color: white;
+    width: 130px;
     text-align: center;
-    border: none;
     outline: none;
-    text-transform: uppercase;
-    letter-spacing: 2.5px;
-    border-radius: 15px;
-    font-family: var(--op1-font-type);
-    font-weight: bold;
+    border-radius: 100px;
     transition: all 0.3s ease 0s;
     padding: 12px;
+    text-decoration: none;
 }
 
 .boton-register:hover{
     cursor: pointer;
-    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
-    color: var(--op2-color-gris-oscuro);
-    transform: translateY(-7px);
-
+    background-color: #f4f4f4;
+    color: black;
+    color: "";
 }
 
 .unProducts{
@@ -254,9 +233,11 @@
   .img-principal-laptop{
     display: block;
     /* height: 99vh; */
-    max-height: 91vh;
+    max-height: 90vh;
     width: 100%;
     object-fit: fill;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
   }
 
   .img-principal{
@@ -284,12 +265,41 @@
     line-height: 1.5;
 }
 
+.img_about_us {
+    width: 400px;
+    border-radius: 50px;
+    margin-left: 20px;
+}
+
 }
 
 /* DESKTOP MQ  */ /* de 900 en adelante podria ir */
 @media (min-width:769px) {
    
 
+    main section.categories {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 10vh;
+    }
+
+    main section.categories img {
+        border-radius: 50px;
+        width: 300px;
+        height: 300px;
+    }
+
+    main section.categories a {
+        font-weight: bold;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    main section.categories a p {
+        margin-top: 10px;
+    }
 
     /* START MAIN  */
     main{
@@ -308,9 +318,6 @@
         margin-bottom: -4px;
         margin-top: 3px;
     }
-   
-
-    
 
     .container-productos{
         flex-direction: row;
@@ -333,10 +340,18 @@
     .img-principal-laptop{
         display: block;
         /* height: 99vh; */
-        max-height: 81vh;
+        max-height: 90vh;
         width: 100%;
         object-fit: fill;
+        border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
       }
+
+      .img_about_us {
+        width: 500px;
+        border-radius: 50px;
+        margin-left: 20px;
+    }
 }
 
 @media (min-width: 1024px){
@@ -344,13 +359,17 @@
     .img-principal-laptop{
         display: block;
         /* height: 99vh; */
-        max-height: 81vh;
+        max-height: 90vh;
         width: 100%;
         object-fit: cover;
+        border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
       }
 
       .section-productos h3{
         margin: 20px;
+        margin-bottom: 20px;
+        margin-top: 0px;
       }
 
       .main-somos p{
@@ -388,22 +407,10 @@
         font-size: 16px;
     }
 
-    .producto-precio{
-        color: var(--op2-color-primary-green);
-        
+    .img_about_us {
+        width: 600px;
+        border-radius: 50px;
+        margin-left: 20px;
     }
 
-    .producto-nombre{
-        font-weight: bolder;
-        text-transform: uppercase;
-    }
-
-    .card{
-        transition: all 0.6s ease;
-    }
-
-    .card:hover{
-        transform: translateY(10px);
-        opacity: 0.8;
-    }
 }
