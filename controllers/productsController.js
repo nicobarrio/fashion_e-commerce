@@ -15,8 +15,8 @@ const Clothes_type = db.Clothes_type;
 const Brand_product = db.Brand_product;
 const Waist = db.Waist; 
 
-const productsJSON = fs.readFileSync(path.join(__dirname , '../data/products.json') , 'utf-8');
-let products = JSON.parse(productsJSON); 
+// const productsJSON = fs.readFileSync(path.join(__dirname , '../data/products.json') , 'utf-8');
+// let products = JSON.parse(productsJSON); 
 
 
 const productsController = {
