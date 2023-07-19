@@ -8,20 +8,20 @@ const TotalsPanels = ( {products , users} ) => {
     <TotalContainer>
       <TotalWrapper>
         <TotalCard>
-          <p>TOTAL PRODUCTOS</p>
           <span>{products.count}</span>
+          <p>TOTAL PRODUCTOS</p>
         </TotalCard>
 
         <TotalCard>
-          <p>TOTAL DE USUARIOS</p>
           <span>{users.count}</span>
+          <p>TOTAL DE USUARIOS</p>
         </TotalCard>
 
         <TotalCard>
-          <p>TOTAL DE CATEGORIAS</p>
           {products.countByCategory && (
             <span> {products.countByCategory.length} </span>
           )}
+          <p>TOTAL DE CATEGORIAS</p>
         </TotalCard>
       </TotalWrapper>
     </TotalContainer>

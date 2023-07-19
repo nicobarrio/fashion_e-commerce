@@ -95,7 +95,6 @@ section.checkout div div.directory a i{
     color: black;
     padding: 4px;
     box-sizing: border-box;
-    border-bottom: solid#000000 1px;  
     margin-top: 20px;
     margin-bottom: 20px;
     border-radius: 50px; 
@@ -607,7 +606,6 @@ section.checkout div div.directory a i{
     padding-left: 80px;
     padding-right: 80px;
     box-sizing: border-box;
-    border-bottom: solid#000000 1px;
 }
 
 .customer-data{
@@ -972,7 +970,6 @@ section.checkout div.product div.product-details p.product-price{
         /*border-left: solid #8cbc84 1px;*/
         border-bottom: solid#000000 0px;
         padding: 40px;
-        padding-top: 70px;
         box-sizing: border-box;
     }
 
@@ -980,7 +977,6 @@ section.checkout div.product div.product-details p.product-price{
         display: flex;
         gap: 20px;
         padding: 10px 0px 10px;
-        border-bottom: solid#000000 1px;
         width: 100%;
     }
       

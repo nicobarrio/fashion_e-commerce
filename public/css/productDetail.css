@@ -35,13 +35,13 @@
 /*  MAIN MOBILE FIRST  PRODUCT DETAIL */
 
 .provisorio {
-    background-color: black;
+    background-color: #292929;
 }
 
 .img_detailProduct{
     display: flex;
     justify-content: center;
-    background-color: black;
+    background-color: #292929;
 }
 .img_detailProduct img {
     width: 85%;
@@ -56,7 +56,7 @@
     justify-content: center;
     align-items: center;
     padding-top: 20px;
-    background-color: black;
+    background-color: #292929;
 }
 
 .small_img img{
@@ -69,11 +69,15 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    background-color: #000000;
+    background-color: #292929;
     color: white;
     padding: 20px;
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px;
+}
+
+div.review_section div.box-comment-review div.profile-user div.user img.profile-image {
+    width: 15%;
 }
 
 .product_name, .product_price {
@@ -190,16 +194,16 @@ div.talles div.xs input:checked + label, div.talles div.s input:checked + label,
 
 .buy_button{
     color:white;
-    background-color: rgb(0, 0, 0);
+    background-color: #292929;
     transition-property: background-color, color;
     transition-duration: 0.5s;
-    margin-top: 30px;
+    margin-top: 20px;
     font-weight: bold;
     font-size: 20px;
     width: 100%;
     padding: 24px 25px;
     border: solid white 1px;
-    border-radius: 20px;
+    border-radius: 100px;
     cursor: pointer;
     transition: all 0.3s ease-in;
 }
@@ -262,7 +266,7 @@ div.talles div.xs input:checked + label, div.talles div.s input:checked + label,
 
 div.review_section {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
     background-color: whitesmoke;
     border-radius: 40px;
@@ -308,7 +312,7 @@ div.review_section input{
     background-color: #ffffff;
     padding: 18px 20px;
     border: solid black 1px;
-    border-radius: 8px;
+    border-radius: 100px;
     margin-top: 10px;
     margin-bottom: 6px;
     width: 100%;
@@ -326,7 +330,7 @@ div.review_section form textarea{
     background-color: #ffffff;
     padding: 18px 20px;
     border: solid black 1px;
-    border-radius: 8px;
+    border-radius: 20px;
     margin-top: 10px;
     margin-bottom: 6px;
     width: 100%;
@@ -378,9 +382,10 @@ form div.rating input[type="radio"]:checked ~ label {
     font-size: 18px;
     padding: 12px 82px;
     border: solid #000000 1px;
-    border-radius: 15px;
+    border-radius: 100px;
     cursor: pointer;
     transition: all 0.3s ease-in;
+    width: -webkit-fill-available;
 }
 
 .write_review:hover {
@@ -416,12 +421,18 @@ div.filter_reviews div.new_reviews label, div.filter_reviews div.highest_reviews
     text-transform: uppercase;
     cursor: pointer;
     color: black;
+    transition: all 0.3s ease-in;
 }
 
 div.filter_reviews div.new_reviews input:checked + label, div.filter_reviews div.highest_reviews input:checked + label, div.filter_reviews div.lower_reviews input:checked + label{
     background-color: black;
     border: 2px solid black;
     color: white;
+}
+
+div.filter_reviews div.new_reviews input:checked + label:hover,  div.filter_reviews div.highest_reviews input:checked + label:hover , div.filter_reviews div.lower_reviews input:checked + label:hover {
+    background-color: whitesmoke;
+    color: black;
 }
 
 div.review_section div.box-comment-review {
@@ -449,7 +460,7 @@ div.review_section div.box-comment-review div.profile-user div.user div p.user-r
 }
 
 div.review_section div.box-comment-review div.profile-user div.user img.profile-image {
-    width: 11%
+    width: 15%
 }
 
 div.review_section div.box-comment-review div.profile-user div.comment-review {
@@ -507,12 +518,19 @@ div.box-button-reviews{
 }
 
 div.review_section button.button-reviews{
-    color: black;
+    color: #292929;
     background-color: whitesmoke;
     padding: 10px 20px;
-    border: solid rgb(175, 175, 175) 1px;
-    border-radius: 10px;
+    border: solid #292929 1px;
+    border-radius: 100px;
     width: 20%;
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+}
+
+div.review_section button.button-reviews:hover {
+    background-color: #292929;
+    color: white;
 }
 
 div.box-button-reviews button{
@@ -567,6 +585,11 @@ div.box-button-reviews button{
 
 @media (min-width: 481px) {
 
+    div.review_section {
+        display: flex;
+        flex-direction: column;
+}
+
     div.talles, div.quantity{
         justify-content: flex-start;
     }
@@ -590,12 +613,17 @@ div.box-button-reviews button{
     }
     
     div.review_section div.box-comment-review div.profile-user div.user img.profile-image {
-        width: 6%;
+        width: 12%;
     }
 
 }
 
 @media (min-width: 769px) {
+
+    div.review_section {
+        display: flex;
+        flex-direction: row;
+    }
    
 .btn_fav{ 
     margin-top: 30px;
@@ -639,7 +667,7 @@ div.box-button-reviews button{
         justify-content: space-evenly;
         align-items: center;
         height: 100%;
-        background-color: black;
+        background-color: #292929;
         margin-left: 60px;
         margin-right: 60px;
     }
@@ -677,7 +705,7 @@ div.box-button-reviews button{
     .box-product {
         display: flex;
         flex-direction: row;
-        background-color: black;
+        background-color: #292929;
         border-bottom-left-radius: 40px;
         border-bottom-right-radius: 40px;
         padding-bottom: 70px;
@@ -758,6 +786,11 @@ div.box-button-reviews button{
         padding-top: 40px;
         padding-bottom: 20px;
     }
+
+    div.review_section {
+        display: flex;
+        flex-direction: row;
+}
 
 }
 

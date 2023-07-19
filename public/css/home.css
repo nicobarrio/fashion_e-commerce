@@ -45,10 +45,7 @@
 
 .article_ppal{
     position: relative;
-    margin-bottom: -4px;
-    width: 100%;
-    height: calc(100vh - 15vh); /*resta 15vh del alto del header*/
-    max-height: 900px;
+    height: 20vh; 
 }
 
 .article-principal-laptop{
@@ -59,15 +56,11 @@
     width: 25%;
 }*/
 
-.img-principal, .img-hombres, .img-mujeres, .img-niños, .img-acc{
-    width: 100%;
-    height: 100%;
-}
-
 .img-principal {
-  height: 99vh;
-  max-height: 900px;
-  object-fit: fill; 
+    width: 100%;
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+    object-fit: contain;
 }
 
 .img-principal-laptop{
@@ -87,11 +80,35 @@
     opacity: 0.3;
 }
 
+main section.categories {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3vh;
+}
+
+main section.categories img {
+    border-radius: 30px;
+    width: auto;
+    height: 250px;
+}
+
+main section.categories a {
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}
+
+main section.categories a p {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
  /*  SECCION DE PRODUCTOS */
 .section-productos {
     text-align: center;
     background-color: #f4f4f4;
-    padding-top: 10vh;
+    padding-top: 7vh;
     padding-bottom: 10vh;
 }
 
@@ -112,7 +129,7 @@
 }
 
 .card{
-    width: 60%;
+    width: 50%;
 }
 
 .enlace {
@@ -127,8 +144,8 @@
 .img-product {
     text-align: center;
     padding: 10px;
-    width: 150px;
-    height: 135px;
+    width: auto;
+    height: 150px;
 }
 
 .main-art-prducto {
@@ -154,7 +171,7 @@
 
 .main-somos {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     text-align: justify;
     align-items: center;
     padding: 15px;
@@ -162,14 +179,24 @@
     background-color: black;
     gap: 20px;
     height: 100vh;
-    border-radius: 50px;
+    border-radius: 30px;
     border-bottom-right-radius: 50px;
     border-bottom-left-radius: 50px;
 }
 
+.main-somos div h2 {
+    font-size: 18px
+}
+
+img.img_about_us {
+    width: 100%;
+    border-radius: 10%;
+}
+
 .main-somos p, .main-somos h4{
-    padding: 15px;
+    padding-top: 15px;
     font-family: var(--op2-font-type);
+    font-size: 14px;
 }
 
 .main-somos h3 {
@@ -220,6 +247,25 @@
 /* TABLET */ /* podria ir de 600 a 900px  */
 @media (min-width: 481px ) {
 
+    img.img_about_us {
+        width: 80%;
+        border-radius: 50px;
+    }
+
+    main section.categories {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 10vh;
+    }
+
+    main section.categories img {
+        border-radius: 50px;
+        width: 125px;
+        height: 125px;
+    }
+
    
 
     .article-principal-laptop{
@@ -260,6 +306,14 @@
     width: 45%;
   }
 
+
+  .main-somos {
+      flex-direction: column; 
+      text-align: -webkit-center;
+      height: 120vh;
+      border-radius: 50px;
+  }
+
   .main-somos p{
     width: 70%;
     line-height: 1.5;
@@ -269,13 +323,18 @@
     width: 400px;
     border-radius: 50px;
     margin-left: 20px;
+    margin-top: 5%;
 }
 
 }
 
 /* DESKTOP MQ  */ /* de 900 en adelante podria ir */
 @media (min-width:769px) {
-   
+
+    img.img_about_us {
+        width: 60%;
+        border-radius: 50px;
+    }
 
     main section.categories {
         display: flex;
@@ -287,8 +346,8 @@
 
     main section.categories img {
         border-radius: 50px;
-        width: 300px;
-        height: 300px;
+        width: 250px;
+        height: 250px;
     }
 
     main section.categories a {
@@ -356,6 +415,26 @@
 
 @media (min-width: 1024px){
 
+    .main-somos{ 
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .main-somos div {
+        margin-top: auto;
+        padding-bottom: 12%;
+    }
+
+    .img_about_us {
+        margin-top: 0.1%;
+    }
+
+    main section.categories img {
+        border-radius: 50px;
+        width: 300px;
+        height: 300px;
+    }
+
     .img-principal-laptop{
         display: block;
         /* height: 99vh; */
@@ -373,7 +452,6 @@
       }
 
       .main-somos p{
-        width: 40%;
       }
 
       .img-product{

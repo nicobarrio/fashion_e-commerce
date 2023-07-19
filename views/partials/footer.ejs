@@ -4,21 +4,29 @@
 
         <div class="footer-contacto footer_item item_contact flex-row">
             <div class="item_icon">
-                <p class="item_footer_option">Contactos</p>
-                <a href="#contactos" class="footer-icono-menu-flecha" onclick="toggleMenu('contactos')"><i class="fas fa-chevron-down" ></i></a>
+                <p class="item_footer_option">Contacto</p>
             </div>
-            <!-- <i class="fas fa-chevron-down" class="footer-icono-menu-flecha"></i> -->
             <div class="lista-footer" id="contactos">
                 <ul>
-                    <li><a>culmen@gmail.com</a> </li>
+                    <li><a>hola@culmen.com</a> </li>
                 </ul>
+            </div>
+            <div style="display: flex; gap: 15px; margin-top: 20px;">
+                <div class="iconos-red-social">
+                    <i class="fab fa-facebook-f"></i>
+                </div>
+                <div class="iconos-red-social">
+                    <i class="fab fa-instagram"></i>
+                </div>
+                <div class="iconos-red-social">
+                    <i class="fab fa-twitter"></i>
+                </div>
             </div>
         </div>
 
         <div class="footer-categorias footer_item flex-row">
             <div class="item_icon">
                 <p class="item_footer_option">Categorias</p>
-                <i class="fas fa-chevron-down" class="footer-icono-menu-flecha"></i>
             </div>
             <div class="lista-footer">
                 <ul>
@@ -33,9 +41,7 @@
 
         <div class="footer-ayuda footer_item flex-row">
             <div class="item_icon">
-                <p class="ayuda item_footer_option">Ayuda</p>
-                <i class="fas fa-chevron-down" class="footer-icono-flecha"></i>
-                
+                <p class="ayuda item_footer_option">Ayuda</p>               
             </div>
             <div class="lista-footer">
                 <ul>
@@ -49,20 +55,12 @@
 
     </section>
 
+    <div class="border">
+
+    </div>
+
+
     <div>
-<section class="redes-sociales">
-
-            <div class="iconos-red-social">
-                <i class="fab fa-facebook-f"></i>
-            </div>
-            <div class="iconos-red-social">
-                <i class="fab fa-instagram"></i>
-            </div>
-            <div class="iconos-red-social">
-                <i class="fab fa-twitter"></i>
-            </div>
-
-    </section>
 
     <section class="modos-pago">
             <p>Métodos de pago</p>
@@ -77,45 +75,8 @@
 
     </div>
 
-    
-    
-    
-
     <div class="copyright">
         <p> © All Rights Reserved</p>
     </div>
 
-
-
-    <script>
-
-        // Obtener los elementos de los contenedores
-        const contactoItem = document.querySelector('.footer-contacto');
-        const categoriasItem = document.querySelector('.footer-categorias');
-        const ayudaItem = document.querySelector('.footer-ayuda');
-
-        // Obtener los elementos de las listas de cada contenedor
-        const listaContacto = contactoItem.querySelector('.lista-footer');
-        const listaCategorias = categoriasItem.querySelector('.lista-footer');
-        const listaAyuda = ayudaItem.querySelector('.lista-footer');
-
-        // Agregar controladores de eventos a los elementos
-        contactoItem.addEventListener('click', () => {
-        listaContacto.classList.toggle('mostrar');
-        });
-
-        categoriasItem.addEventListener('click', () => {
-        listaCategorias.classList.toggle('mostrar');
-        });
-
-        ayudaItem.addEventListener('click', () => {
-        listaAyuda.classList.toggle('mostrar');
-        });
-
-        /* function toggleMenu(id) {
-        const menu = document.getElementById(id);
-         menu.classList.toggle('mostrar');
-} */
-
-    </script>
 </footer>

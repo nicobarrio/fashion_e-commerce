@@ -14,17 +14,17 @@ export const HeaderContainer = styled.header`
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  background-color: ${colors.primaryGreen};
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-  color: ${colors.lightGrey};
-  font-size: 2rem;
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 14px;
   margin-bottom: 15px;
   padding: 10px;
+  font-family: 'Helvetica', sans-serif;
 
   @media (max-width: 425px) {
     flex-direction: row;
     height: auto;
-    font-size: 1.5rem;
+    font-size: 14px;
   }
 `;
 
@@ -54,7 +54,7 @@ export const LogoImage = styled.img`
 `;
 
 export const PictureImg = styled.picture`
-  width: 25%;
+  width: 20%;
   @media (max-width: 425px) {
     width: 50%;
   }

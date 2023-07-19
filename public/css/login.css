@@ -128,7 +128,7 @@ main {
     
     box-sizing: border-box;
     
-    border: solid rgb(175, 175, 175) 1px;
+    border: solid #292929 1px;
     border-radius: 100px;
 }
 
@@ -154,7 +154,7 @@ main {
     
     box-sizing: border-box;
     
-    border: solid #000000 1px;
+    border: solid #292929 1px;
     border-radius: 100px;
 }
 
@@ -173,7 +173,7 @@ main {
     
     box-sizing: border-box;
     
-    border: solid #000000 1px;
+    border: solid #292929 1px;
     border-radius: 100px;
 }
 
@@ -194,7 +194,7 @@ main {
 }
 
 .login_form_container button {
-    color: #515151;
+    color: #292929;
     background-color: rgb(255, 255, 255);
     transition-property: background-color, color;
     transition-duration: 0.5s;
@@ -203,19 +203,19 @@ main {
     font-size: 20px;
     width: 100%;
     padding: 18px 20px;
-    border: solid rgb(175, 175, 175)1px;
+    border: 1px solid #292929;
     border-radius: 100px;
     cursor: pointer;
 }
 
 .login_form_container button:hover{
     color: white;
-    background-color: black;
+    background-color: #292929;
 }
 
 .register_form_container button {
-    color:black;
-    background-color: #ffffff;
+    color:#292929;
+    background-color: #f4f4f4;
     transition-property: background-color, color;
     transition-duration: 0.5s;
     margin-top: 30px;
@@ -223,14 +223,14 @@ main {
     font-size: 20px;
     width: 100%;
     padding: 18px 20px;
-    border: solid rgb(0, 0, 0) 1px;
+    border: solid #292929 1px;
     border-radius: 100px;
     cursor: pointer;
 }
 
 .register_form_container button:hover{
     color: white;
-    background-color: black;
+    background-color: #292929;
 }
 
 .registerform p {
@@ -242,7 +242,7 @@ main {
 .pie-form {
     font-size: 16px;
     text-align: center;    
-    margin-top: 15px;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
 }
@@ -251,10 +251,6 @@ main {
     text-decoration: none;
     color: #515151;
     margin-bottom: 3px;
-}
-
-.pie-form a:hover {
-    color: #4daa57;
 }
 
 .inferior {
@@ -277,6 +273,7 @@ main {
 .promo_checkbox {
     display: flex;
     flex-direction: row;
+    margin-top: 20px;
 }
 
 .input_radio{
@@ -286,7 +283,7 @@ main {
 .promo_radio{
     margin-block: auto;
     padding-left: 10px;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 

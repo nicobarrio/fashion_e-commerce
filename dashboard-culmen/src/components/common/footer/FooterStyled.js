@@ -5,9 +5,11 @@ export const FooterContainer = styled.footer`
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f1f1f1;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    background-color: #f4f4f4;
     color: #333;
-    font-size: 2rem;
-    margin-top: 15px;
+    font-size: 20px;
+    margin-right: 3%;
+    margin-left: 3%;
+    border-radius: 40px;
+    font-family: 'Helvetica', sans-serif;
 `;

@@ -12,28 +12,18 @@
 
    <main>
 
-    <section class="section_profile_user">
-
-        <div class="profileUser">
-            <h1> Hola <%= user.name %> </h1>
-            <nav class="nav-favorites">
-                <ul>
-                    <li><a href="/user/profile"> Volver al perfil </a></li>
-                    <li><a href="/products"> Ver todos los productos </a></li>
-                    <li><a href="/">Ir a Home </a></li>
-                    <li><a href="http://127.0.0.1:5173/">Ir al Dashboard </a></li>
-                </ul>
-            </nav>
-        </div>
-
-    </section>
     
     
  
     <% if(products && products.length > 0){  %>
 
         <section class="section-productos flex-col">
-            <h2 class="title-favorites"> Aqui estan tus productos favoritos: </h2>
+            <div>
+                <nav class="nav-favorites">
+                        <a href="/user/profile"><button>Volver al perfil</button></a>
+                </nav>
+            </div>
+            <h4 class="title-favorites"> Aqui estan tus productos favoritos: </h2>
             <div class="container-productos flex-col "> 
                 <%  products.forEach((p)=>{ %>
 
@@ -44,7 +34,6 @@
                                 <button type="submit" class="btn-remove" data-form="form-delete"><i class="fa-solid fa-trash-can"></i></button>
                             </form>
                             <img src="/products/<%= p.imageProduct.image_route %>" alt="" class="img-product">
-                            <button class="btn" type="button"> VER DETALLE </button>
                             <div class="main-art-prducto">
                                 <p><strong class="producto-precio">$<%= p.price %></strong></p>
                                 <p class="producto-nombre"><strong><%= p.name %></strong></p>

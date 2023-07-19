@@ -1,21 +1,23 @@
 import styled from 'styled-components'; 
 
 export const TotalCard = styled.div`
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    background-color: #f4f4f4;
+    padding: 10px;
     text-align: center;
+    border-radius: 40px;
+    margin: 10%;
+
     p {
-        font-size: 1.2rem;
+        font-size: 16px;
         margin-bottom: 10px;
         color: #333;
         font-family: 'Arial', sans-serif;
       }
     
       span {
-        font-size: 2.5rem;
+        font-size: 20px;
         font-weight: bold;
-        color: #009688;
+        color: #000000;
         font-family: 'Helvetica', sans-serif;
       }
 `;

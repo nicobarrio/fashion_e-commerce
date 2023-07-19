@@ -64,8 +64,8 @@ body {
 .section_profile_user{
     border-radius: 30px;
     background-color: #ffffff;
-
-   
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 .profileUser{
@@ -81,7 +81,7 @@ body {
     gap: 10px;
     align-items: center;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
 }
 
@@ -159,6 +159,10 @@ body {
         padding-right: 80px;
     }
 
+    .buttons-container {
+        flex-direction: column;
+    }
+
 }
 /* end tablets */
 
@@ -183,14 +187,12 @@ body {
     }
     
     .section_profile_user{
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center; 
         gap: 10%;
         align-items: center;
         background-color: #ffffff;
         padding: 50px 0px;
-        height: 80vh;
-
     }
 
     .profileUser{
@@ -216,7 +218,8 @@ body {
     .buttons-container{
             width: 90%;
             margin: auto;
-            margin-bottom: 5%
+            margin-bottom: 5%;
+            flex-direction: row; 
     }
 
     .btn{
