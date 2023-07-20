@@ -1,5 +1,7 @@
 require('dotenv').config();
 const express = require('express'); 
+const mysql = require('mysql2');
+const db = require('./database/models');
 const path = require('path');
 const app = express(); 
 // PUERTO A UTILIZAR 
@@ -8,6 +10,21 @@ const PORT = 3030;
 const publicPath = path.join(__dirname ,'/public');
 const cors = require('cors');
 
+const dbConnection = mysql.createConnection({
+    host: 'bplz87v1vrttxigueesc-mysql.services.clever-cloud.com',
+    user: 'u0lbjcr886eoncef',
+    password: 'HnOkAjxcFKL0FsRY4PQt',
+    database: 'bplz87v1vrttxigueesc',
+    port: 3306
+  });
+
+dbConnection.connect((err) => {
+    if (err) {
+      console.error('Error al conectar con la base de datos:', err);
+    } else {
+      console.log('Conexión con la base de datos establecida correctamente');
+    }
+  });
 
 /************ REQUIRE DE RUTAS  **************/ 
 const mainRoute =  require('./routes/mainRoute.js');  
