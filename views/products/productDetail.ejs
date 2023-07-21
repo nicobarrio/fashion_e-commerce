@@ -80,7 +80,7 @@
                     
                     <% if(locals.userLogged){ %>
                         <form action="/carrito/<%= elegido.idProduct %>" method="post" class="form_varios">
-                            <button class="buy_button btn_fav" type="submit"> Agregar a Favoritos ⭐ </button>
+                            <button class="buy_button btn_fav" type="submit"> Agregar a Favoritos </button>
                             <a href="/carrito/compraFinalizada" class="buy_button button_a_a "><button class=" button_a" type="button" >Comprar</button></a>
                             <button class="agregar-carrito buy_button btn_cart" type="button" data-product-id="<%= elegido.idProduct %>">Agregar al carrito</button>
                         </form>

@@ -201,7 +201,7 @@ div.talles div.xs input:checked + label, div.talles div.s input:checked + label,
     font-weight: bold;
     font-size: 20px;
     width: 100%;
-    padding: 24px 25px;
+    padding: 15px 25px;
     border: solid white 1px;
     border-radius: 100px;
     cursor: pointer;
@@ -232,11 +232,11 @@ div.talles div.xs input:checked + label, div.talles div.s input:checked + label,
 
 .edit_button{
     display: flex;
-    background-color: black;
-    color: white;
-    border: solid 0.5px transparent;
+    background-color: #f4f4f4;
+    border: 1px solid #292929;
+    border-radius: 100px;
+    color: #292929;
     justify-content: center;
-    border-radius: 15px;
     padding: 12px 30px;
     transition: all 0.3s ease-in-out;
     transform: scale(1);
@@ -246,11 +246,11 @@ div.talles div.xs input:checked + label, div.talles div.s input:checked + label,
 }
 
 .delete_button{
-    background-color: black;
-    color: white;
+    background-color: #f4f4f4;
+    border: 1px solid #292929;
+    border-radius: 100px;
+    color: #292929;
     align-items: center;
-    border: solid 0.5px transparent;
-    border-radius: 15px;
     padding: 12px 30px;
     transition: all 0.3s ease-in-out;
     transform: scale(1);
@@ -561,7 +561,7 @@ div.box-button-reviews button{
 
 .edit_button, .delete_button{
     width: 100%;
-    padding: 25px;
+    padding: 15px;
     font-weight: bold;
     text-transform: uppercase;
     transition: all 0.5s ease-in-out;
@@ -720,10 +720,6 @@ div.box-button-reviews button{
         justify-content: flex-start;
     }
 
-    .provisorio2 {
-
-    }
-
     .img_detailProduct{
         width: 70%;
          height: auto;
@@ -746,8 +742,12 @@ div.box-button-reviews button{
         margin-right: 50px;
     }
 
+    .form_buttons{
+        flex-direction: row;
+    }
+
     .edit_button, .delete_button{
-        width: 20%;
+        width: 40%;
     }
 
     .post_review_container {
@@ -807,7 +807,7 @@ div.box-button-reviews button{
         margin-top: 30px;
         padding: 10px;
         font-size: 18px;
-        margin: 5px 10px;
+        margin-top: 5%;
     }
 
     .buy_button button{
@@ -860,6 +860,7 @@ div.box-button-reviews button{
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
+        margin-top: 5%;
     }
 
     .provisorio{

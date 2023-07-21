@@ -38,27 +38,24 @@ body {
 }
 
 main {
-    margin-top: 30vh;
     margin-bottom: 10vh;
 }
 
 .contenedor_login {
     display: flex;
     align-items: center;
-    width: 100%;
     flex-direction: column;
     background-color: white;
-    margin-left: 2.5%;
-    margin-right: 2.5%;
+    margin-left: 5%;
+    margin-right: 5%;
     padding-top: 10vh;
 }
 .contenedor_register {
     display: flex;
     align-items: center;
-    width: 100%;
     flex-direction: column;
     background-color: #ffffff;
-    margin-left: 2.5%;
+    margin-left: 5%;
     margin-right: 5%;
     padding-top: 10vh;
 }
@@ -100,8 +97,7 @@ main {
     width: 100%;
     padding: 20px;
     background-color: rgb(255, 255, 255);
-    border-bottom: solid#8cbc84 1px;
-    
+    border-bottom: solid#dbdbdb 1px;
 }
 
 .register_form_container {

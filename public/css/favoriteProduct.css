@@ -47,19 +47,19 @@ button:hover {
 
 .btn-elegir{
     padding: 10px 30px;
-    border: none;
+    border: 1px solid #292929;
     border-radius: 20px;
-    background-color: #9e9acb;
-    color: #ffff;
+    background-color: #f4f4f4;
+    color: #292929;
     margin: 15px;
-    font-weight: bolder;
     transition: all ease 0.5s;
+    cursor: pointer;
 }
 
 .btn-elegir:hover{
     cursor: pointer;
-    box-shadow: 1px 1px 3px black;
-    transform: translate(1);
+    background-color: #292929;
+    color: white;
 }
 
 .card2{
