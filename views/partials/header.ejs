@@ -8,15 +8,16 @@
             </a>
             <div class="menu-overlay"></div>
             <div class="menu-options">
+                <img src="/image/logo-culmen-negro.png" alt="" class="mobile_logo">
                 <ul id="menu-ul">
-                    <li > <a href="/"> Home </a></li>
+                    <li > <a href="/">Inicio</a></li>
                     <li > <a href="/products/listarProducts?buscador_home=hombre">Hombre</a> </li>
                     <li > <a href="/products/listarProducts?buscador_home=mujer">Mujer</a> </li>
                     <li > <a href="/products/listarProducts?buscador_home=niño">Niño</a> </li>
-                    <li > <a href="/products/listarProducts?buscador_home=lentes">Lentes</a> </li>
-                    <li > <a href="/products/listarProducts?buscador_home=gorra">Gorra</a> </li>
-                    <li id="all_products"><a href="/products">Todos los productos</a></li>
-                    <li><a href="/user/login">Iniciar sesión o registrarse</a> </li>
+                    <li > <a href="/products/listarProducts?buscador_home=lentes">Sunglasses</a> </li>
+                    <li > <a href="/products/listarProducts?buscador_home=gorra">Caps</a> </li>
+                    <li id="all_products"><a href="/products">Ver todo</a></li>
+                    <li><a href="/user/login">Iniciá sesión o registrate</a> </li>
                     <% if( locals.userLogged && (locals.userLogged.is_admin == 0) ){ %>
                         <li><a href="http://127.0.0.1:5173/">Dashboard</a></li>
 

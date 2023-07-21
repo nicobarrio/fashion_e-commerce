@@ -71,7 +71,6 @@ body{
     top: 0;
     width: 100%;
     z-index: 23;
-    justify-content: center;
     gap: 20px;
     padding-left: 10px;
 }
@@ -80,8 +79,18 @@ main{
     margin-top: 9vh;
 }
 
-.user {
-  margin-right: 5%;
+.contenedor-buscador {
+  width: 65%;
+}
+
+.mobile_logo {
+  width: 21%;
+  padding-left: 1rem;
+}
+
+
+.contenedor-hamburguesa {
+  margin-left: 5%;
 }
 
 .contenedor-user{
@@ -108,11 +117,10 @@ main{
 }
 
 .nav-bar{
-    /*  width: 30%; */
+    width: 100%;
     display: flex;
-    justify-content: space-evenly;
-     gap: 20px;
-     margin: 0;
+    gap: 20px;
+    margin: 0;
  }
 .buscador_home{
     width: 100%;
@@ -180,7 +188,7 @@ main{
 /* Estilos para el contenedor que contiene la lista de opciones */
 .menu-options {
     position: absolute;
-    /*top: 0;*/
+    top: 0;
     left: 0;
     width: 100%;
     padding: 1rem;
@@ -452,10 +460,19 @@ footer div.border {
 
         .contenedor-hamburguesa{
           text-align: center;
+          margin-left: 0%;
+        }
+
+        .menu-options {
+          padding-left: 5%;
         }
 
         .hamburg{
           font-size: 25px;
+        }
+
+        .mobile_logo {
+          width: 14%;
         }
 
         .form_buscador{
@@ -514,6 +531,10 @@ footer div.border {
             flex-direction: row;
             place-content: center;
             background-color: #f4f4f4;
+          }
+
+          div.product-card div.product-group div article a img.image-product {
+            border-radius: 40px;
           }
       }
 
@@ -733,6 +754,10 @@ footer div.border {
 
       .main-footer div {
         margin-inline: auto;
+    }
+
+    .user {
+      margin-right: 5%;
     }
   }
 
