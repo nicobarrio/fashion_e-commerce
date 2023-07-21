@@ -39,17 +39,16 @@
 
 .title-edit{
     text-align: center;
-    font-style: oblique;
-    color: var(--op2-color-primary-green);
+    color: black;
 }
 
 .title-edit strong{
     font-style: oblique;
-    color: var(--op2-color-primary-green);
+    color: black;
 }
 
 main{
-    background-color: var(--op2-color-gris-claro);
+    background-color: #f4f4f4;
     
 }
 
@@ -79,7 +78,13 @@ main{
 }
 
 .descripcion {
-    width: 50%;
+    padding: 18px 20px;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    border-radius: 50px;
+    background-color: #f4f4f4;
+    border: 1px solid #292929;
+    width: 100%
 }
 
 .contenedor-img {
@@ -106,10 +111,10 @@ main{
     padding: 5px;
     margin: 5px;
     background-color: transparent;
-    color: rgb(8, 92, 8);
+    color: #292929;
     width: 80%;
     text-align: center;
-    border: 1px solid rgb(8, 92, 8);
+    border: 1px solid #292929;
 }
 
 .contenedor-prendas {
@@ -121,7 +126,7 @@ main{
     padding: 10px 0px;
     padding-left: 80px;
     align-items: flex-start;
-    border: 1px solid var(--op2-color-primary-green);
+    border: 1px solid #292929;
     border-radius: 10px;
 }
 
@@ -140,7 +145,7 @@ main{
     align-items: flex-start;
     padding: 10px 0px;
     padding-left: 100px;
-    border: 1px solid var(--op2-color-primary-green);
+    border: 1px solid #292929;
     border-radius: 10px;
 }
 
@@ -163,48 +168,52 @@ main{
 
 .btn-crear{
     margin: 10px;
-    background-color: #39b54a;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
+    background-color: #f4f4f4;
+    color: #292929;
+    border: 1px solid #292929;
+    border-radius: 30px;
+    padding: 10px 30px;
 }
 
 .btn-crear:hover{
-    
-    box-shadow: 0px 0px 10px rgb(100 100 100);
-    background-color: #1b8629;
+    color: white;
+    background-color: #292929;
 }
 
 .inputstyle{
     background-color: white;
-    border: solid #8cbc84 1px;
+    border: solid #292929 1px;
     border-radius: 8px;
     margin-top: 10px;
     margin-bottom: 6px;
     padding: 8px 10px;
-    width: 90%;
+    width: 100%;
 }
 
 .inputstyle {
     background-color: transparent;
-    border: solid #8cbc84 1px;
+    border: solid #292929 1px;
     border-radius: 8px;
     margin-top: 10px;
     margin-bottom: 6px;
     padding: 8px 10px;
     width: 90%;
     font-weight: bold;
-    color: var(--op2-color-bg-blue-oscuro);
+    color: #292929;
 }
 
 .img {
-    border: solid #8cbc84 1px;
-    border-radius: 8px;
+    font-size: 13px;
+    color: #1b262c;
+    background-color: #f4f4f4;
+    width: 100%;
+    height: 40px;
     margin-top: 10px;
     margin-bottom: 6px;
-    padding: 18px 18px 18px;
-    
+    padding: 18px 18px 42px;
+    box-sizing: border-box;
+    border: solid #292929 1px;
+    border-radius: 100px;
 }
 
 .errors{
@@ -213,7 +222,6 @@ main{
 
 input:focus, textarea:focus {
     outline: none;
-    border: none; /* define el borde cuando el input tiene foco */
   }
   
 input {
@@ -244,7 +252,7 @@ input {
         margin-top: 0;
        }
        .formulario{
-        width: 50%;
+        width: 70%;
         margin: 0 auto;
        }
 
@@ -252,20 +260,24 @@ input {
         flex-direction: column;
        }
        .container-input{
-        width: 90%;
+        width: 100%;
         flex-direction: column;
        }
-       .img{
-        width: 90%;
-    }
 
        .contenedor-prendas{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        align-items: center;
-        width: 85%;
-        padding-left: 5px;
+        font-size: 13px;
+        color: #1b262c;
+        background-color: #f4f4f4;
+        height: 40px;
+        margin-top: 10px;
+        margin-bottom: 6px;
+        padding: 18px 18px 42px;
+        box-sizing: border-box;
+        border: solid #292929 1px;
+        border-radius: 100px;
        }
        .categoria-prenda{
         margin: 0px 30px;
@@ -273,39 +285,64 @@ input {
        .contenedor-talles{
         flex-direction: row;
         align-items: center;
-        width: 85%;
+        font-size: 13px;
+        color: #1b262c;
+        background-color: #f4f4f4;
+        height: 40px;
+        margin-top: 10px;
+        margin-bottom: 6px;
+        padding: 18px 18px 42px;
+        box-sizing: border-box;
+        border: solid #292929 1px;
+        border-radius: 100px;
         
     }
     .inputstyle{
-        width: 90%;
-        padding: 15px 10px;
+        padding: 18px 20px;
+        padding-top: 27px;
+        padding-bottom: 27px;
+        border-radius: 100px;
+        width: 100%;
     }
 
     .categorias{
-        padding: 10px;
-        margin: 10px;
-        width: 90%;
+        color: #1b262c;
+        background-color: #f4f4f4;
+        width: 100%;
+        height: 40px;
+        margin-top: 10px;
+        margin-bottom: 6px;
+        padding: 18px 18px 42px;
+        box-sizing: border-box;
+        border: solid #292929 1px;
+        border-radius: 100px;
     }
 
     .btn-crear{
-        padding: 20px;
-        font-size: 16px;
-        font-weight: bold;
-        transition: all 0.5s ease;
+        color: black;
+    background-color: #f4f4f4;
+    transition-property: background-color, color;
+    transition-duration: 0.5s;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    width: 100%;
+    padding: 18px 20px;
+    border: solid #292929 1px;
+    border-radius: 100px;
+    cursor: pointer;
+}
     }
 
     .btn-crear:hover{
-        box-shadow: 0px 0px 10px rgb(100 100 100);
-        background-color: #1b8629;
-        cursor: pointer;
+        background-color: #292929;
+
     }
 
     .title-edit{
         font-size: 40px;
         padding: 40px 0px  ;
     }
-
-}
 
 
 

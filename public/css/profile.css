@@ -62,8 +62,9 @@ body {
 }
 
 .section_profile_user{
-    border-radius: 30px;
-    background-color: #ffffff;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+    background-color: #f4f4f4;
     display: flex;
     flex-direction: column-reverse;
 }
@@ -74,6 +75,7 @@ body {
     align-items: center;
     justify-content: space-evenly;
     padding: 10px;
+    margin-bottom: 5%;
 }
 
 .buttons-container {
@@ -115,28 +117,28 @@ body {
 
 
 .btn_edit{
-    background-color: white;
+    background-color: #f4f4f4;
     border: 1px solid #242424;
     color: #242424;
 }
 .btn_delete{
-    background-color: white;
+    background-color:  #f4f4f4;
     border: 1px solid #242424;
     color: #242424;
 }
 .btn_favorite{
-    background-color: white;
+    background-color:  #f4f4f4;
     border: 1px solid #242424;
     color: #242424;
 }
 .btn_create{
-    background-color: white;
+    background-color:  #f4f4f4;
     border: 1px solid #242424;
     color: #242424;
 }
 
 .btn_dashboard{
-    background-color: white;
+    background-color:  #f4f4f4;
     border: 1px solid #242424;
     color: #242424;
 }
@@ -191,14 +193,14 @@ body {
         justify-content: center; 
         gap: 10%;
         align-items: center;
-        background-color: #ffffff;
+        background-color: #f4f4f4;
         padding: 50px 0px;
     }
 
     .profileUser{
-        background: #ffffff;
+        background: #f4f4f4;
         border: none;
-        border-radius: 20px;
+        border-radius: 50px;
     }
 
     .img_profile{
