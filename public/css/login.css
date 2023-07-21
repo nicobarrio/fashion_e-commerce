@@ -191,7 +191,7 @@ main {
 
 .login_form_container button {
     color: #292929;
-    background-color: rgb(255, 255, 255);
+    background-color: #f4f4f4;
     transition-property: background-color, color;
     transition-duration: 0.5s;
     margin-top: 30px;
@@ -211,7 +211,7 @@ main {
 
 .register_form_container button {
     color:#292929;
-    background-color: #f4f4f4;
+    background-color: #ffffff;
     transition-property: background-color, color;
     transition-duration: 0.5s;
     margin-top: 30px;
